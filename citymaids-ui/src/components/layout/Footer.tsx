@@ -42,7 +42,7 @@ const trustBadges = ['ðŸ›¡ï¸ Fully Insured', 'âœ… Background Checke
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-slate-400">
+    <footer className="bg-primary-900 text-primary-200">
 
       {/* Top CTA strip */}
       <div className="bg-gradient-to-r from-primary-800 via-primary-700 to-teal-600">
@@ -70,9 +70,9 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Main footer */}
-      <div className="container-xl pt-16 pb-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10 mb-12">
+      <div className="bg-primary-800">
+        <div className="container-xl pt-16 pb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-10 mb-12">
 
           {/* Brand column */}
           <div className="lg:col-span-2">
@@ -93,13 +93,13 @@ export default function Footer() {
 
             <div className="space-y-3 text-sm mb-6">
               <a href="tel:+15550001234" className="flex items-center gap-3 hover:text-primary-400 transition-colors group">
-                <div className="w-8 h-8 rounded-lg bg-slate-800 group-hover:bg-primary-600 flex items-center justify-center transition-colors flex-shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-primary-700 group-hover:bg-primary-500 flex items-center justify-center transition-colors flex-shrink-0">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 </div>
                 +1 (555) 000-1234
               </a>
               <a href="mailto:hello@citymaids.com" className="flex items-center gap-3 hover:text-primary-400 transition-colors group">
-                <div className="w-8 h-8 rounded-lg bg-slate-800 group-hover:bg-primary-600 flex items-center justify-center transition-colors flex-shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-primary-700 group-hover:bg-primary-500 flex items-center justify-center transition-colors flex-shrink-0">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
                 hello@citymaids.com
@@ -116,7 +116,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               {socials.map(s => (
                 <a key={s.label} href={s.href} aria-label={s.label}
-                  className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-200">
+                  className="w-9 h-9 rounded-lg bg-primary-700 hover:bg-primary-500 flex items-center justify-center text-primary-200 hover:text-white transition-all duration-200">
                   {s.icon}
                 </a>
               ))}
@@ -130,7 +130,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 {items.map(([label, href]) => (
                   <li key={label}>
-                    <Link to={href} className="text-sm text-slate-400 hover:text-primary-400 transition-colors flex items-center gap-1.5 group">
+                    <Link to={href} className="text-sm text-primary-200 hover:text-white transition-colors flex items-center gap-1.5 group">
                       <span className="w-0 group-hover:w-2 h-px bg-primary-500 transition-all duration-200 overflow-hidden" />
                       {label}
                     </Link>
@@ -142,10 +142,10 @@ export default function Footer() {
         </div>
 
         {/* Trust badges */}
-        <div className="border-t border-white/5 pt-8 mb-8">
+        <div className="border-t border-white/10 pt-8 mb-8">
           <div className="flex flex-wrap items-center justify-center gap-4">
             {trustBadges.map(b => (
-              <span key={b} className="text-xs text-slate-500 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-full font-medium">
+              <span key={b} className="text-xs text-primary-200 bg-primary-700 border border-primary-600 px-3 py-1.5 rounded-full font-medium">
                 {b}
               </span>
             ))}
@@ -153,16 +153,18 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
-          <p>Â© {new Date().getFullYear()} CityMaids. All rights reserved.</p>
+        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-primary-300">
+          <p>© {new Date().getFullYear()} CityMaids. All rights reserved.</p>
           <div className="flex gap-5">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(l => (
-              <a key={l} href="#" className="hover:text-slate-400 transition-colors">{l}</a>
+              <a key={l} href="#" className="hover:text-white transition-colors">{l}</a>
             ))}
           </div>
         </div>
       </div>
+    </div>
     </footer>
   )
 }
+
 

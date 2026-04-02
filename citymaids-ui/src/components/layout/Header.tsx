@@ -25,7 +25,7 @@ export default function Header() {
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname.startsWith(href)
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100' : 'bg-white border-b border-transparent'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/98 backdrop-blur-md shadow-md border-b border-slate-100' : 'bg-white border-b border-slate-100'}`}>
       <div className="container-xl">
         <div className="flex items-center justify-between h-18 py-3">
           <Link to="/" className="flex items-center gap-3 group">

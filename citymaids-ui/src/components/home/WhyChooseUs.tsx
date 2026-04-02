@@ -44,39 +44,61 @@ export default function WhyChooseUs() {
   const { ref, inView } = useInView()
 
   return (
-    <section className="section bg-primary-950">
+    <section className="section bg-white">
       <div className="container-xl">
-        <motion.div
-          ref={ref as any}
-          initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}
-          className="text-center mb-14"
-        >
-          <span className="inline-flex items-center gap-2 text-teal-400 font-semibold text-xs uppercase tracking-widest mb-3">
-            Why CityMaids
-          </span>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-4" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-            Why Thousands Choose Us
-          </h2>
-          <p className="text-slate-400 text-lg max-w-xl mx-auto">
-            We're not just a cleaning service — we're your trusted home care partner.
-          </p>
-        </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          {/* Left: Image */}
+          <motion.div
+            ref={ref as any}
+            initial={{ opacity: 0, x: -20 }} animate={inView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-strong">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85"
+                alt="Professional cleaner"
+                className="w-full h-[480px] object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-5 -right-5 bg-primary-600 text-white rounded-2xl p-5 shadow-blue hidden md:block text-center">
+              <p className="text-3xl font-extrabold" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>5+</p>
+              <p className="text-primary-100 text-xs leading-tight">Years of<br/>Excellence</p>
+            </div>
+          </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {usps.map((u, i) => (
+          {/* Right: Content */}
+          <div>
             <motion.div
-              key={u.title}
-              initial={{ opacity: 0, y: 24 }} animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.4, delay: i * 0.07 }}
-              className="bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/8 hover:border-white/20 transition-all duration-300 group"
+              initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5 }}
             >
-              <div className={`w-12 h-12 rounded-2xl ${u.color} flex items-center justify-center text-2xl mb-4`}>
-                {u.icon}
-              </div>
-              <h4 className="font-bold text-white text-lg mb-2">{u.title}</h4>
-              <p className="text-slate-400 text-sm leading-relaxed">{u.desc}</p>
+              <span className="section-tag">Why CityMaids</span>
+              <h2 className="section-title mb-4">
+                Why will you choose<br />our service?
+              </h2>
+              <p className="text-slate-500 mb-8 leading-relaxed">
+                We're not just a cleaning service — we're your trusted home care partner. Here's what sets us apart.
+              </p>
             </motion.div>
-          ))}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {usps.map((u, i) => (
+                <motion.div
+                  key={u.title}
+                  initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.4, delay: i * 0.07 }}
+                  className="flex items-start gap-3 p-4 bg-primary-50 rounded-2xl border border-primary-100"
+                >
+                  <div className={`w-10 h-10 rounded-xl ${u.color} flex items-center justify-center text-xl flex-shrink-0`}>
+                    {u.icon}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-slate-900 text-sm mb-0.5">{u.title}</h4>
+                    <p className="text-slate-500 text-xs leading-relaxed">{u.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
