@@ -3,44 +3,32 @@ import { useInView } from '../../hooks/useInView'
 
 const steps = [
   {
-    number: '01',
-    title: 'Choose a Service',
-    desc: 'Browse our range of professional cleaning services and select the one that fits your home and budget.',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-      </svg>
-    ),
+    step: '01',
+    title: 'Select Service',
+    desc: 'Choose from our range of professional cleaning services that fits your home.',
+    icon: '🧹',
+    color: 'bg-blue-50 text-blue-600 border-blue-100',
   },
   {
-    number: '02',
-    title: 'Book a Schedule',
-    desc: 'Select your preferred date and time. Our booking form takes less than 2 minutes to complete.',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-      </svg>
-    ),
+    step: '02',
+    title: 'Choose Time Slot',
+    desc: 'Pick your preferred date and time. Booking takes under 60 seconds.',
+    icon: '📅',
+    color: 'bg-primary-50 text-primary-600 border-primary-100',
   },
   {
-    number: '03',
-    title: 'We Clean Your Home',
-    desc: 'Our vetted professionals arrive on time with all supplies and deliver a spotless, consistent result.',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
+    step: '03',
+    title: 'Confirm Booking',
+    desc: 'Review your details and confirm. You\'ll get an instant confirmation.',
+    icon: '✅',
+    color: 'bg-teal-50 text-teal-600 border-teal-100',
   },
   {
-    number: '04',
-    title: 'Enjoy & Relax',
-    desc: 'Sit back and enjoy your clean home. We guarantee your satisfaction — or we re-clean for free.',
-    icon: (
-      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
+    step: '04',
+    title: 'Get Service Delivered',
+    desc: 'Our vetted professional arrives on time and delivers a spotless result.',
+    icon: '🏠',
+    color: 'bg-cta-50 text-cta-600 border-cta-100',
   },
 ]
 
@@ -48,55 +36,45 @@ export default function HowItWorks() {
   const { ref, inView } = useInView()
 
   return (
-    <section ref={ref} className="section bg-white">
+    <section ref={ref} className="section bg-slate-50">
       <div className="container-xl">
-
-        {/* Header */}
-        <div className={`flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-4 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-px bg-brand-500" />
-              <span className="text-brand-600 font-semibold text-xs uppercase tracking-widest">Simple Process</span>
-            </div>
-            <h2 className="text-4xl sm:text-5xl font-extrabold text-dark-900 leading-tight"
-              style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-              How It Works
-            </h2>
-          </div>
-          <p className="text-dark-500 text-base max-w-sm lg:text-right">
+        <div className={`text-center mb-14 transition-all duration-600 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <span className="section-tag justify-center">Simple Process</span>
+          <h2 className="section-title mb-4">How It Works</h2>
+          <p className="text-slate-500 text-lg max-w-lg mx-auto">
             Four simple steps to a cleaner, healthier home — no hassle, no guesswork.
           </p>
         </div>
 
-        {/* Steps */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-dark-100 rounded-2xl overflow-hidden">
-          {steps.map((step, i) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {steps.map((s, i) => (
             <div
-              key={step.number}
-              className={`relative p-8 border-b sm:border-b-0 sm:border-r border-dark-100 last:border-0 bg-white hover:bg-dark-50 transition-colors duration-200 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-              style={{ transitionDelay: `${i * 100}ms`, transition: 'opacity 0.5s ease, transform 0.5s ease, background-color 0.2s ease' }}
+              key={s.step}
+              className={`relative bg-white rounded-3xl p-7 shadow-card border border-slate-100 transition-all duration-500 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${i * 100}ms` }}
             >
-              {/* Step number */}
-              <p className="text-5xl font-extrabold text-dark-100 mb-6 leading-none select-none"
-                style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                {step.number}
-              </p>
-              {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-5">
-                {step.icon}
+              {/* Connector line */}
+              {i < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-10 -right-3 w-6 h-0.5 bg-slate-200 z-10" />
+              )}
+
+              <div className="flex items-center gap-3 mb-5">
+                <div className={`w-12 h-12 rounded-2xl border-2 ${s.color} flex items-center justify-center text-2xl flex-shrink-0`}>
+                  {s.icon}
+                </div>
+                <span className="text-3xl font-extrabold text-slate-100" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+                  {s.step}
+                </span>
               </div>
-              <h3 className="font-bold text-dark-900 text-lg mb-2"
-                style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                {step.title}
-              </h3>
-              <p className="text-dark-500 text-sm leading-relaxed">{step.desc}</p>
+
+              <h3 className="font-bold text-slate-900 text-lg mb-2">{s.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>
 
-        {/* CTA */}
         <div className={`text-center mt-12 transition-all duration-500 delay-500 ${inView ? 'opacity-100' : 'opacity-0'}`}>
-          <Link to="/booking" className="btn btn-brand btn-lg">
+          <Link to="/booking" className="btn-cta btn-lg">
             Book Your First Cleaning
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

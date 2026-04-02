@@ -20,7 +20,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     'white':         'btn btn-white',
     'ghost':         'btn btn-ghost',
     'danger':        'btn bg-red-500 text-white hover:bg-red-600 focus:ring-red-500',
-    'success':       'btn bg-brand-500 text-white hover:bg-brand-600 focus:ring-brand-500',
+    'success':       'btn bg-teal-500 text-white hover:bg-teal-600 focus:ring-teal-500',
   }
   const sizes = { xs: 'btn-sm text-xs px-3 py-1.5', sm: 'btn-sm', md: 'btn-md', lg: 'btn-lg', xl: 'btn-xl' }
 

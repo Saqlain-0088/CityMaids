@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 
 const WA_ICON = (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -38,24 +38,24 @@ const socials = [
   { label: 'LinkedIn', href: '#', icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg> },
 ]
 
-const trustBadges = ['🛡️ Fully Insured', '✅ Background Checked', '♻️ Eco-Friendly', '⭐ 4.9★ Rated']
+const trustBadges = ['ðŸ›¡ï¸ Fully Insured', 'âœ… Background Checked', 'â™»ï¸ Eco-Friendly', 'â­ 4.9â˜… Rated']
 
 export default function Footer() {
   return (
     <footer className="bg-slate-950 text-slate-400">
 
       {/* Top CTA strip */}
-      <div className="bg-gradient-to-r from-brand-700 via-brand-600 to-brand-500">
+      <div className="bg-gradient-to-r from-primary-800 via-primary-700 to-teal-600">
         <div className="container-xl py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
             <p className="text-white text-xl font-bold" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               Ready for a spotless home?
             </p>
-            <p className="text-brand-100 text-sm mt-1">Book your first cleaning and get 15% off with code FIRST15</p>
+            <p className="text-primary-100 text-sm mt-1">Book your first cleaning and get 15% off with code FIRST15</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-            <Link to="/booking" className="inline-flex items-center justify-center gap-2 bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors">
-              Book Now — From $79
+            <Link to="/booking" className="inline-flex items-center justify-center gap-2 bg-white text-primary-700 font-bold px-6 py-3 rounded-xl hover:bg-primary-50 transition-colors">
+              Book Now â€” From $79
             </Link>
             <a
               href="https://wa.me/15550001234?text=Hi%2C%20I%20want%20to%20book%20a%20cleaning%20service"
@@ -77,13 +77,13 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-5 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center shadow-brand">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center shadow-brand">
                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
               <span className="text-xl font-extrabold text-white" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-                City<span className="text-brand-400">Maids</span>
+                City<span className="text-primary-400">Maids</span>
               </span>
             </Link>
 
@@ -92,14 +92,14 @@ export default function Footer() {
             </p>
 
             <div className="space-y-3 text-sm mb-6">
-              <a href="tel:+15550001234" className="flex items-center gap-3 hover:text-brand-400 transition-colors group">
-                <div className="w-8 h-8 rounded-lg bg-slate-800 group-hover:bg-brand-600 flex items-center justify-center transition-colors flex-shrink-0">
+              <a href="tel:+15550001234" className="flex items-center gap-3 hover:text-primary-400 transition-colors group">
+                <div className="w-8 h-8 rounded-lg bg-slate-800 group-hover:bg-primary-600 flex items-center justify-center transition-colors flex-shrink-0">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 </div>
                 +1 (555) 000-1234
               </a>
-              <a href="mailto:hello@citymaids.com" className="flex items-center gap-3 hover:text-brand-400 transition-colors group">
-                <div className="w-8 h-8 rounded-lg bg-slate-800 group-hover:bg-brand-600 flex items-center justify-center transition-colors flex-shrink-0">
+              <a href="mailto:hello@citymaids.com" className="flex items-center gap-3 hover:text-primary-400 transition-colors group">
+                <div className="w-8 h-8 rounded-lg bg-slate-800 group-hover:bg-primary-600 flex items-center justify-center transition-colors flex-shrink-0">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                 </div>
                 hello@citymaids.com
@@ -116,7 +116,7 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               {socials.map(s => (
                 <a key={s.label} href={s.href} aria-label={s.label}
-                  className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-brand-600 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-200">
+                  className="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-200">
                   {s.icon}
                 </a>
               ))}
@@ -130,8 +130,8 @@ export default function Footer() {
               <ul className="space-y-3">
                 {items.map(([label, href]) => (
                   <li key={label}>
-                    <Link to={href} className="text-sm text-slate-400 hover:text-brand-400 transition-colors flex items-center gap-1.5 group">
-                      <span className="w-0 group-hover:w-2 h-px bg-brand-500 transition-all duration-200 overflow-hidden" />
+                    <Link to={href} className="text-sm text-slate-400 hover:text-primary-400 transition-colors flex items-center gap-1.5 group">
+                      <span className="w-0 group-hover:w-2 h-px bg-primary-500 transition-all duration-200 overflow-hidden" />
                       {label}
                     </Link>
                   </li>
@@ -154,7 +154,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
-          <p>© {new Date().getFullYear()} CityMaids. All rights reserved.</p>
+          <p>Â© {new Date().getFullYear()} CityMaids. All rights reserved.</p>
           <div className="flex gap-5">
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(l => (
               <a key={l} href="#" className="hover:text-slate-400 transition-colors">{l}</a>
@@ -165,3 +165,4 @@ export default function Footer() {
     </footer>
   )
 }
+

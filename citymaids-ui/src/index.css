@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -11,7 +11,7 @@
     font-family: 'Inter', system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     color: #0f172a;
-    background: #ffffff;
+    background: #f8fafc;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -19,52 +19,69 @@
 }
 
 @layer components {
+  /* ── Buttons ── */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-brand-600 text-white font-semibold rounded-xl px-6 py-3 text-sm transition-all duration-200 hover:bg-brand-700 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply inline-flex items-center justify-center gap-2 bg-primary-600 text-white font-semibold rounded-2xl px-6 py-3 text-sm transition-all duration-200 hover:bg-primary-700 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-brand;
   }
-  .btn-primary:hover { box-shadow: 0 4px 20px rgba(22,163,74,0.25); }
+  .btn-cta {
+    @apply inline-flex items-center justify-center gap-2 bg-cta-500 text-white font-bold rounded-2xl px-6 py-3 text-sm transition-all duration-200 hover:bg-cta-600 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-cta-400 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed shadow-cta;
+  }
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 bg-white text-slate-800 font-semibold rounded-xl px-6 py-3 text-sm border border-slate-200 transition-all duration-200 hover:border-brand-400 hover:text-brand-700 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 bg-white text-slate-800 font-semibold rounded-2xl px-6 py-3 text-sm border border-slate-200 transition-all duration-200 hover:border-primary-400 hover:text-primary-700 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2;
   }
-  .btn-secondary:hover { box-shadow: 0 2px 15px rgba(0,0,0,0.06); }
   .btn-dark {
-    @apply inline-flex items-center justify-center gap-2 bg-slate-900 text-white font-semibold rounded-xl px-6 py-3 text-sm transition-all duration-200 hover:bg-slate-800 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 bg-slate-900 text-white font-semibold rounded-2xl px-6 py-3 text-sm transition-all duration-200 hover:bg-slate-800 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-slate-700 focus:ring-offset-2;
   }
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 text-slate-600 font-semibold rounded-xl px-6 py-3 text-sm transition-all duration-200 hover:bg-slate-100 hover:text-slate-900 focus:outline-none;
+    @apply inline-flex items-center justify-center gap-2 text-slate-600 font-semibold rounded-2xl px-6 py-3 text-sm transition-all duration-200 hover:bg-slate-100 hover:text-slate-900 focus:outline-none;
   }
-  .btn-lg { @apply px-8 py-4 text-base; }
-  .btn-xl { @apply px-10 py-5 text-lg; }
-  .btn-sm { @apply px-4 py-2 text-xs; }
+  .btn-lg { @apply px-8 py-4 text-base rounded-2xl; }
+  .btn-xl { @apply px-10 py-5 text-lg rounded-2xl; }
+  .btn-sm { @apply px-4 py-2 text-xs rounded-xl; }
 
   /* Legacy compat */
-  .btn { @apply inline-flex items-center justify-center gap-2 font-semibold rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed; }
-  .btn-brand { @apply btn bg-brand-600 text-white hover:bg-brand-700 focus:ring-brand-500 hover:-translate-y-0.5; }
-  .btn-brand-outline { @apply btn border-2 border-brand-600 text-brand-700 hover:bg-brand-600 hover:text-white focus:ring-brand-500; }
-  .btn-white { @apply btn bg-white text-brand-700 hover:bg-brand-50 focus:ring-brand-400 hover:-translate-y-0.5; }
+  .btn { @apply inline-flex items-center justify-center gap-2 font-semibold rounded-2xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-brand { @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 hover:-translate-y-0.5; }
+  .btn-brand-outline { @apply btn border-2 border-primary-600 text-primary-700 hover:bg-primary-600 hover:text-white focus:ring-primary-500; }
+  .btn-white { @apply btn bg-white text-primary-700 hover:bg-primary-50 focus:ring-primary-400 hover:-translate-y-0.5; }
   .btn-md { @apply px-6 py-2.5 text-sm; }
 
+  /* ── Layout ── */
   .section { @apply py-20 lg:py-28; }
+  .section-sm { @apply py-14 lg:py-20; }
   .container-xl { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
 
-  .input-base { @apply w-full px-4 py-3 rounded-xl border text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-0 bg-white placeholder:text-slate-400; }
-  .input-default { @apply input-base border-slate-200 hover:border-slate-300 focus:ring-brand-500 focus:border-brand-500; }
-  .input-error { @apply input-base border-red-400 focus:ring-red-400 bg-red-50/30; }
-  .input-success { @apply input-base border-brand-400 focus:ring-brand-400; }
+  /* ── Cards ── */
+  .card { @apply bg-white rounded-3xl border border-slate-100 shadow-card; }
+  .card-hover { @apply card transition-all duration-300 hover:-translate-y-1 hover:shadow-card-hover; }
 
+  /* ── Inputs ── */
+  .input-base { @apply w-full px-4 py-3 rounded-2xl border text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-0 bg-white placeholder:text-slate-400; }
+  .input-default { @apply input-base border-slate-200 hover:border-slate-300 focus:ring-primary-500 focus:border-primary-500; }
+  .input-error { @apply input-base border-red-400 focus:ring-red-400 bg-red-50/30; }
+  .input-success { @apply input-base border-teal-400 focus:ring-teal-400; }
+
+  /* ── Badges ── */
   .badge { @apply inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full; }
-  .badge-brand { @apply badge bg-brand-100 text-brand-700; }
+  .badge-primary { @apply badge bg-primary-100 text-primary-700; }
+  .badge-teal { @apply badge bg-teal-100 text-teal-700; }
+  .badge-cta { @apply badge bg-cta-100 text-cta-700; }
+  /* Legacy */
+  .badge-brand { @apply badge bg-primary-100 text-primary-700; }
   .badge-dark { @apply badge bg-slate-100 text-slate-700; }
 
-  .card-soft { @apply bg-white rounded-2xl border border-slate-100; box-shadow: 0 2px 15px rgba(0,0,0,0.06); }
-  .card-hover { @apply card-soft transition-all duration-300 hover:-translate-y-1; }
-  .card-hover:hover { box-shadow: 0 4px 30px rgba(0,0,0,0.10); }
+  /* ── Section tags ── */
+  .section-tag { @apply inline-flex items-center gap-2 text-primary-600 font-semibold text-xs uppercase tracking-widest mb-3; }
+  .section-title { @apply text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight; }
 }
 
 @layer utilities {
-  .text-gradient { @apply bg-gradient-to-r from-brand-600 to-brand-400 bg-clip-text text-transparent; }
+  .text-gradient { @apply bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent; }
+  .text-gradient-warm { @apply bg-gradient-to-r from-cta-500 to-cta-400 bg-clip-text text-transparent; }
   .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
   .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .animate-fade-up { animation: fadeUp 0.5s ease-out forwards; }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 }
