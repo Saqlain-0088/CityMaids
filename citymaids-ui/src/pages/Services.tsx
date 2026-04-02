@@ -1,0 +1,321 @@
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import MainLayout from '../components/layout/MainLayout'
+
+const services = [
+  {
+    id: 1,
+    name: 'Standard Cleaning',
+    slug: 'standard-cleaning',
+    price: 79,
+    duration: '2 hours',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1000&q=90',
+    summary: 'Consistent, reliable cleaning for everyday home maintenance. Perfect for weekly or bi-weekly scheduling.',
+    desc: 'Our standard cleaning service covers all the essentials to keep your home consistently fresh. Our trained professionals handle every room with care, using eco-friendly products that are safe for your family and pets.',
+    includes: [
+      'Vacuuming all floors & area rugs',
+      'Mopping hard surface floors',
+      'Dusting furniture, shelves & surfaces',
+      'Bathroom sanitizing & scrubbing',
+      'Kitchen counters, sink & stovetop',
+      'Trash removal & bin liners replaced',
+    ],
+    ideal: 'Homeowners wanting regular upkeep',
+    badge: null,
+  },
+  {
+    id: 2,
+    name: 'Deep Cleaning',
+    slug: 'deep-cleaning',
+    price: 149,
+    duration: '4 hours',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1000&q=90',
+    summary: 'An intensive top-to-bottom clean that reaches every corner, including areas regular cleaning misses.',
+    desc: 'Deep cleaning goes far beyond the surface. We tackle inside appliances, baseboards, cabinet interiors, grout lines, and all the hidden areas that accumulate grime over time. Ideal as a first clean or seasonal refresh.',
+    includes: [
+      'Everything in Standard Cleaning',
+      'Inside oven & refrigerator',
+      'Baseboards, window sills & ledges',
+      'Cabinet interiors & drawer fronts',
+      'Grout scrubbing in bathrooms',
+      'Light fixtures & ceiling fans',
+    ],
+    ideal: 'First-time clients or seasonal deep cleans',
+    badge: 'Most Popular',
+  },
+  {
+    id: 3,
+    name: 'Move In / Move Out',
+    slug: 'move-in-out-cleaning',
+    price: 199,
+    duration: '5 hours',
+    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1000&q=90',
+    summary: 'Specialized cleaning for property transitions — ensuring a spotless handover and full deposit return.',
+    desc: 'Moving is stressful enough. Our move-in/move-out service handles the entire property from top to bottom, leaving it in pristine condition for the next occupant or for your final inspection.',
+    includes: [
+      'Full deep clean of entire property',
+      'Inside all appliances',
+      'Window & glass cleaning',
+      'Wall scuff & spot treatment',
+      'Garage & utility area sweep',
+      'Final walkthrough & checklist',
+    ],
+    ideal: 'Tenants & landlords during property transitions',
+    badge: null,
+  },
+  {
+    id: 4,
+    name: 'Office Cleaning',
+    slug: 'office-cleaning',
+    price: 129,
+    duration: '3 hours',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1000&q=90',
+    summary: 'Professional-grade cleaning for offices and commercial spaces that drives productivity.',
+    desc: 'A clean workspace creates a better environment for your team and leaves a strong impression on clients. Our commercial cleaning team works around your schedule to minimize disruption.',
+    includes: [
+      'Desk & workstation sanitizing',
+      'Restroom deep clean & restock',
+      'Break room & kitchen cleaning',
+      'Floor vacuuming & mopping',
+      'Trash & recycling management',
+      'Reception & common area polish',
+    ],
+    ideal: 'Small to mid-size offices & commercial spaces',
+    badge: null,
+  },
+  {
+    id: 5,
+    name: 'Carpet Cleaning',
+    slug: 'carpet-cleaning',
+    price: 99,
+    duration: '2 hours',
+    image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1000&q=90',
+    summary: 'Advanced hot steam extraction that removes embedded dirt, allergens, stains, and odors.',
+    desc: 'Our carpet cleaning service uses professional-grade hot water extraction equipment to deep clean your carpets and rugs. We pre-treat stains and apply deodorizing treatment, leaving your carpets fresh and revitalized.',
+    includes: [
+      'Pre-treatment stain removal',
+      'Hot steam extraction cleaning',
+      'Deodorizing & freshening treatment',
+      'Pet hair & dander removal',
+      'Edge & corner detail cleaning',
+      'Quick-dry process',
+    ],
+    ideal: 'Homes with pets, children, or heavy foot traffic',
+    badge: null,
+  },
+  {
+    id: 6,
+    name: 'Post-Construction',
+    slug: 'post-construction-cleaning',
+    price: 249,
+    duration: '6 hours',
+    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1000&q=90',
+    summary: 'Eliminate construction dust, debris, and residue — restoring your space to move-in condition.',
+    desc: 'After renovation or new construction, your space needs specialist attention. We remove fine construction dust, debris, paint residue, and adhesive marks, leaving every surface clean and ready for occupancy.',
+    includes: [
+      'Fine dust & debris removal',
+      'Window & glass cleaning',
+      'Paint splatter & adhesive removal',
+      'Floor restoration & polish',
+      'Vent & fixture cleaning',
+      'Final inspection & sign-off',
+    ],
+    ideal: 'Post-renovation or new construction handover',
+    badge: null,
+  },
+]
+
+export default function Services() {
+  const [active, setActive] = useState(0)
+  const s = services[active]
+
+  return (
+    <MainLayout>
+
+      {/* ── Page Header ── */}
+      <div className="bg-white border-b border-dark-100">
+        <div className="container-xl py-14">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-6 h-px bg-brand-500" />
+              <span className="text-brand-600 font-semibold text-xs uppercase tracking-widest">What We Offer</span>
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-dark-900 leading-tight mb-4"
+              style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+              Professional Cleaning<br />
+              <span className="text-gradient">For Every Situation</span>
+            </h1>
+            <p className="text-dark-500 text-lg leading-relaxed">
+              Six specialist services delivered by vetted, insured professionals. Transparent pricing, guaranteed results.
+            </p>
+          </div>
+        </div>
+
+        {/* ── Tab bar ── */}
+        <div className="container-xl">
+          <div className="flex gap-0 overflow-x-auto scrollbar-hide border-t border-dark-100">
+            {services.map((item, i) => (
+              <button
+                key={item.slug}
+                onClick={() => setActive(i)}
+                className={`relative flex-shrink-0 px-6 py-4 text-sm font-semibold transition-all duration-200 border-b-2 whitespace-nowrap ${
+                  active === i
+                    ? 'border-brand-600 text-brand-700 bg-brand-50/50'
+                    : 'border-transparent text-dark-500 hover:text-dark-800 hover:bg-dark-50'
+                }`}
+              >
+                {item.name}
+                {item.badge && (
+                  <span className="ml-2 text-xs bg-brand-100 text-brand-700 font-bold px-2 py-0.5 rounded-full">
+                    {item.badge}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── Service Detail Panel ── */}
+      <section className="bg-white py-16">
+        <div className="container-xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+            {/* Left: Image */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden aspect-[4/3]">
+                <img
+                  key={s.slug}
+                  src={s.image}
+                  alt={s.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Price card */}
+              <div className="absolute -bottom-5 -right-5 bg-white rounded-2xl shadow-xl border border-dark-100 p-5 hidden md:block">
+                <p className="text-xs text-dark-400 font-medium mb-1">Starting from</p>
+                <p className="text-4xl font-extrabold text-dark-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+                  ${s.price}
+                </p>
+                <p className="text-sm text-dark-400 mt-0.5">per visit · {s.duration}</p>
+              </div>
+            </div>
+
+            {/* Right: Content */}
+            <div className="lg:pt-2">
+              {s.badge && (
+                <span className="inline-block bg-brand-100 text-brand-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
+                  {s.badge}
+                </span>
+              )}
+
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-dark-900 mb-3"
+                style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+                {s.name}
+              </h2>
+
+              <p className="text-brand-600 font-semibold text-sm mb-4">{s.summary}</p>
+
+              <p className="text-dark-600 leading-relaxed mb-8">{s.desc}</p>
+
+              {/* Includes */}
+              <div className="mb-8">
+                <h3 className="text-xs font-semibold text-dark-400 uppercase tracking-widest mb-4">
+                  What's Included
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {s.includes.map(item => (
+                    <div key={item} className="flex items-center gap-3">
+                      <div className="w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-3 h-3 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </div>
+                      <span className="text-sm text-dark-700">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Ideal for */}
+              <div className="flex items-center gap-3 bg-dark-50 rounded-xl px-4 py-3 mb-8">
+                <svg className="w-4 h-4 text-brand-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <p className="text-sm text-dark-600">
+                  <span className="font-semibold text-dark-900">Ideal for: </span>
+                  {s.ideal}
+                </p>
+              </div>
+
+              {/* Price (mobile) */}
+              <div className="flex items-baseline gap-2 mb-6 md:hidden">
+                <span className="text-4xl font-extrabold text-dark-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>${s.price}</span>
+                <span className="text-dark-400 text-sm">per visit · {s.duration}</span>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link to={`/booking?service=${s.id}`} className="btn btn-brand btn-lg flex-1 justify-center">
+                  Book {s.name}
+                </Link>
+                <Link to={`/services/${s.slug}`} className="btn btn-ghost btn-lg border border-dark-200 justify-center">
+                  Full Details
+                </Link>
+              </div>
+
+              <p className="text-xs text-dark-400 mt-3 text-center sm:text-left">
+                Free cancellation 24h before · No hidden fees · Satisfaction guaranteed
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Trust strip ── */}
+      <section className="bg-dark-50 border-t border-dark-100 py-10">
+        <div className="container-xl">
+          <div className="flex flex-wrap items-center justify-center gap-10">
+            {[
+              { icon: '🛡️', text: 'Fully insured & bonded' },
+              { icon: '✅', text: 'Background-checked staff' },
+              { icon: '♻️', text: 'Eco-friendly products' },
+              { icon: '⭐', text: '4.9★ average rating' },
+              { icon: '🔄', text: '100% satisfaction guarantee' },
+            ].map(item => (
+              <div key={item.text} className="flex items-center gap-2.5 text-sm text-dark-600">
+                <span className="text-lg">{item.icon}</span>
+                <span className="font-medium">{item.text}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Bottom CTA ── */}
+      <section className="bg-white py-16">
+        <div className="container-xl">
+          <div className="bg-dark-900 rounded-3xl px-8 py-12 sm:px-14 flex flex-col sm:flex-row items-center justify-between gap-8">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2"
+                style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+                Not sure which service fits?
+              </h2>
+              <p className="text-dark-400 text-base">
+                Our team will help you choose the right option for your home.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+              <Link to="/booking" className="btn btn-brand btn-lg">Book a Service</Link>
+              <Link to="/contact" className="btn btn-ghost btn-lg border border-white/20 text-white hover:bg-white/10">
+                Talk to Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </MainLayout>
+  )
+}
