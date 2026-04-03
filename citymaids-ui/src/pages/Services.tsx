@@ -142,40 +142,42 @@ export default function Services() {
     <MainLayout>
 
       {/* ── Page Header ── */}
-      <div className="bg-white border-b border-dark-100">
+      <div className="bg-white border-b border-slate-100">
         <div className="container-xl py-14">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-px bg-brand-500" />
-              <span className="text-brand-600 font-semibold text-xs uppercase tracking-widest">What We Offer</span>
+              <div className="w-6 h-px bg-primary-500" />
+              <span className="text-primary-600 font-semibold text-xs uppercase tracking-widest">What We Offer</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-dark-900 leading-tight mb-4"
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-4"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               Professional Cleaning<br />
-              <span className="text-gradient">For Every Situation</span>
+              <span className="bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent">For Every Situation</span>
             </h1>
-            <p className="text-dark-500 text-lg leading-relaxed">
+            <p className="text-slate-500 text-lg leading-relaxed">
               Six specialist services delivered by vetted, insured professionals. Transparent pricing, guaranteed results.
             </p>
           </div>
         </div>
+      </div>
 
-        {/* ── Tab bar ── */}
+      {/* ── Tab bar — STICKY so you can switch without scrolling back up ── */}
+      <div className="sticky top-16 z-20 bg-white border-b border-slate-200 shadow-sm">
         <div className="container-xl">
-          <div className="flex gap-0 overflow-x-auto scrollbar-hide border-t border-dark-100">
+          <div className="flex gap-0 overflow-x-auto scrollbar-hide">
             {services.map((item, i) => (
               <button
                 key={item.slug}
                 onClick={() => selectService(i)}
                 className={`relative flex-shrink-0 px-6 py-4 text-sm font-semibold transition-all duration-200 border-b-2 whitespace-nowrap ${
                   active === i
-                    ? 'border-brand-600 text-brand-700 bg-brand-50/50'
-                    : 'border-transparent text-dark-500 hover:text-dark-800 hover:bg-dark-50'
+                    ? 'border-primary-600 text-primary-700 bg-primary-50/50'
+                    : 'border-transparent text-slate-500 hover:text-slate-800 hover:bg-slate-50'
                 }`}
               >
                 {item.name}
                 {item.badge && (
-                  <span className="ml-2 text-xs bg-brand-100 text-brand-700 font-bold px-2 py-0.5 rounded-full">
+                  <span className="ml-2 text-xs bg-primary-100 text-primary-700 font-bold px-2 py-0.5 rounded-full">
                     {item.badge}
                   </span>
                 )}
@@ -186,7 +188,7 @@ export default function Services() {
       </div>
 
       {/* ── Service Detail Panel ── */}
-      <section ref={detailRef} className="bg-white py-16 scroll-mt-20">
+      <section ref={detailRef} className="bg-white py-16 scroll-mt-32">
         <div className="container-xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
