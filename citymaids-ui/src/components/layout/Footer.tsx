@@ -190,11 +190,11 @@ export default function Footer() {
           <div className="border-t border-slate-800 pt-8 mb-8">
             <div className="flex flex-wrap items-center justify-center gap-6">
               {[
-                { icon: '🛡️', text: 'Fully Insured' },
-                { icon: '✅', text: 'Background Checked' },
-                { icon: '♻️', text: 'Eco-Friendly' },
-                { icon: '⭐', text: '4.9 Rated' },
-                { icon: '🔄', text: '100% Satisfaction' },
+                { icon: '\uD83D\uDEE1\uFE0F', text: 'Fully Insured' },
+                { icon: '\u2705', text: 'Background Checked' },
+                { icon: '\u267B\uFE0F', text: 'Eco-Friendly' },
+                { icon: '\u2B50', text: '4.9 Rated' },
+                { icon: '\uD83D\uDD04', text: '100% Satisfaction' },
               ].map(b => (
                 <div key={b.text} className="flex items-center gap-2 text-slate-400 text-xs font-medium">
                   <span className="text-base">{b.icon}</span>
@@ -207,7 +207,7 @@ export default function Footer() {
           {/* Bottom bar */}
           <div className="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
             <p className="text-slate-500 text-xs">
-              © {new Date().getFullYear()} CityMaids. All rights reserved.
+              \u00A9 {new Date().getFullYear()} CityMaids. All rights reserved.
             </p>
             <div className="flex gap-5">
               {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(l => (

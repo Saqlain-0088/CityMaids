@@ -16,7 +16,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const { pathname } = useLocation()
 
-  // Pages where the hero is dark — header starts transparent
+  // Pages where the hero is dark \u2014 header starts transparent
   const isDarkHero = pathname === '/'
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Header() {
         ? 'bg-transparent'
         : 'bg-white/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.08)] border-b border-slate-100/80'
     }`}>
-      {/* Top info bar — only when scrolled (white mode) */}
+      {/* Top info bar \u2014 only when scrolled (white mode) */}
       <div className={`bg-primary-700 transition-all duration-300 overflow-hidden ${scrolled || !isDarkHero ? 'hidden' : 'hidden lg:block'}`}>
         <div className="container-xl py-2 flex items-center justify-between text-xs text-primary-100">
           <div className="flex items-center gap-6">
@@ -58,7 +58,7 @@ export default function Header() {
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
-            Available 7 days a week — Book in 60 seconds
+            Available 7 days a week \u2014 Book in 60 seconds
           </div>
         </div>
       </div>

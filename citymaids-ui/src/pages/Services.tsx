@@ -50,7 +50,7 @@ const services = [
     price: 199,
     duration: '5 hours',
     image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1000&q=90',
-    summary: 'Specialized cleaning for property transitions â€” ensuring a spotless handover and full deposit return.',
+    summary: 'Specialized cleaning for property transitions \u2014 ensuring a spotless handover and full deposit return.',
     desc: 'Moving is stressful enough. Our move-in/move-out service handles the entire property from top to bottom, leaving it in pristine condition for the next occupant or for your final inspection.',
     includes: [
       'Full deep clean of entire property',
@@ -110,7 +110,7 @@ const services = [
     price: 249,
     duration: '6 hours',
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1000&q=90',
-    summary: 'Eliminate construction dust, debris, and residue â€” restoring your space to move-in condition.',
+    summary: 'Eliminate construction dust, debris, and residue \u2014 restoring your space to move-in condition.',
     desc: 'After renovation or new construction, your space needs specialist attention. We remove fine construction dust, debris, paint residue, and adhesive marks, leaving every surface clean and ready for occupancy.',
     includes: [
       'Fine dust & debris removal',
@@ -129,13 +129,13 @@ export default function Services() {
   const [active, setActive] = useState(0)
   const s = services[active]
 
-  // Just swap content â€” no scroll. The sticky tab bar stays visible.
+  // Just swap content \u2014 no scroll. The sticky tab bar stays visible.
   const selectService = (i: number) => setActive(i)
 
   return (
     <MainLayout>
 
-      {/* â”€â”€ Page Header â”€â”€ */}
+      {/* \u2500\u2500 Page Header \u2500\u2500 */}
       <div className="bg-gradient-to-br from-slate-900 to-primary-950 py-16"><div className="container-xl">
           <div className="text-center max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-4"><span className="text-primary-400 font-semibold text-xs uppercase tracking-widest">What We Offer</span>
@@ -151,7 +151,7 @@ export default function Services() {
         </div>
       </div>
 
-      {/* â”€â”€ Tab bar â€” STICKY so you can switch without scrolling back up â”€â”€ */}
+      {/* \u2500\u2500 Tab bar \u2014 STICKY so you can switch without scrolling back up \u2500\u2500 */}
       <div className="sticky top-16 z-20 bg-white border-b border-slate-200 shadow-sm">
         <div className="container-xl">
           <div className="flex gap-0 overflow-x-auto scrollbar-hide">
@@ -177,7 +177,7 @@ export default function Services() {
         </div>
       </div>
 
-      {/* â”€â”€ Service Detail Panel â”€â”€ */}
+      {/* \u2500\u2500 Service Detail Panel \u2500\u2500 */}
       <section className="bg-white py-16">
         <div className="container-xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -199,7 +199,7 @@ export default function Services() {
                 <p className="text-4xl font-extrabold text-slate-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                   ${s.price}
                 </p>
-                <p className="text-sm text-slate-400 mt-0.5">per visit Â· {s.duration}</p>
+                <p className="text-sm text-slate-400 mt-0.5">per visit \u00B7 {s.duration}</p>
               </div>
             </div>
 
@@ -253,7 +253,7 @@ export default function Services() {
               {/* Price (mobile) */}
               <div className="flex items-baseline gap-2 mb-6 md:hidden">
                 <span className="text-4xl font-extrabold text-slate-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>${s.price}</span>
-                <span className="text-slate-400 text-sm">per visit Â· {s.duration}</span>
+                <span className="text-slate-400 text-sm">per visit \u00B7 {s.duration}</span>
               </div>
 
               {/* CTAs */}
@@ -273,23 +273,23 @@ export default function Services() {
               </div>
 
               <p className="text-xs text-slate-400 mt-3 text-center sm:text-left">
-                Free cancellation 24h before Â· No hidden fees Â· Satisfaction guaranteed
+                Free cancellation 24h before \u00B7 No hidden fees \u00B7 Satisfaction guaranteed
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* â”€â”€ Trust strip â”€â”€ */}
+      {/* \u2500\u2500 Trust strip \u2500\u2500 */}
       <section className="bg-slate-50 border-t border-slate-100 py-10">
         <div className="container-xl">
           <div className="flex flex-wrap items-center justify-center gap-10">
             {[
-              { icon: 'ðŸ›¡ï¸', text: 'Fully insured & bonded' },
-              { icon: 'âœ…', text: 'Background-checked staff' },
-              { icon: 'â™»ï¸', text: 'Eco-friendly products' },
-              { icon: 'â­', text: '4.9â˜… average rating' },
-              { icon: 'ðŸ”„', text: '100% satisfaction guarantee' },
+              { icon: '\uD83D\uDEE1\uFE0F', text: 'Fully insured & bonded' },
+              { icon: '\u2705', text: 'Background-checked staff' },
+              { icon: '\u00E2\u2122\u00BB\u00EF\u00B8\u008F', text: 'Eco-friendly products' },
+              { icon: '\u2B50', text: '4.9\u2605 average rating' },
+              { icon: '\uD83D\uDD04', text: '100% satisfaction guarantee' },
             ].map(item => (
               <div key={item.text} className="flex items-center gap-2.5 text-sm text-slate-600">
                 <span className="text-lg">{item.icon}</span>
@@ -300,7 +300,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* â”€â”€ Bottom CTA â”€â”€ */}
+      {/* \u2500\u2500 Bottom CTA \u2500\u2500 */}
       <section className="bg-white py-16">
         <div className="container-xl">
           <div className="bg-slate-900 rounded-3xl px-8 py-12 sm:px-14 flex flex-col sm:flex-row items-center justify-between gap-8">

@@ -22,7 +22,7 @@ const usps = [
   },
   {
     title: 'Affordable Pricing',
-    desc: 'No hidden fees, no surprises. You see the full price before you book — and that\'s exactly what you pay.',
+    desc: 'No hidden fees, no surprises. You see the full price before you book \u2014 and that\'s exactly what you pay.',
     icon: '\uD83D\uDCB0',
     color: 'bg-amber-50 text-amber-600',
   },
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
                 Why will you choose<br />our service?
               </h2>
               <p className="text-slate-500 mb-8 leading-relaxed">
-                We're not just a cleaning service — we're your trusted home care partner. Here's what sets us apart.
+                We're not just a cleaning service \u2014 we're your trusted home care partner. Here's what sets us apart.
               </p>
             </motion.div>
 

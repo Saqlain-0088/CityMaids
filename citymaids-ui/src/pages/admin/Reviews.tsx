@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+\uFEFFimport { useState } from 'react'
 import AdminLayout from '../../components/layout/AdminLayout'
 import Button from '../../components/ui/Button'
 import { reviews as initial, Review } from '../../data/reviews'
@@ -37,7 +37,7 @@ export default function AdminReviews() {
       <div className="space-y-5">
         <div>
           <h1 className="text-2xl font-extrabold text-slate-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Reviews</h1>
-          <p className="text-slate-500 text-sm mt-0.5">{list.length} total reviews Â· {avgRating}â˜… average</p>
+          <p className="text-slate-500 text-sm mt-0.5">{list.length} total reviews \u00B7 {avgRating}\u2605 average</p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
@@ -45,7 +45,7 @@ export default function AdminReviews() {
             { label: 'Total Reviews', value: list.length, color: 'from-blue-500 to-blue-600' },
             { label: 'Approved', value: list.filter(r => r.status === 'approved').length, color: 'from-brand-500 to-brand-600' },
             { label: 'Pending', value: list.filter(r => r.status === 'pending').length, color: 'from-yellow-500 to-orange-500' },
-            { label: 'Avg Rating', value: `${avgRating}â˜…`, color: 'from-purple-500 to-purple-600' },
+            { label: 'Avg Rating', value: `${avgRating}\u2605`, color: 'from-purple-500 to-purple-600' },
           ].map(s => (
             <div key={s.label} className="bg-white rounded-2xl border border-slate-100 shadow-soft p-4">
               <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-3`}>
@@ -77,9 +77,9 @@ export default function AdminReviews() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap mb-1">
                       <p className="font-bold text-slate-900">{r.customerName}</p>
-                      <span className="text-xs text-slate-400">Â·</span>
+                      <span className="text-xs text-slate-400">\u00B7</span>
                       <p className="text-xs text-slate-500">{r.serviceName}</p>
-                      <span className="text-xs text-slate-400">Â·</span>
+                      <span className="text-xs text-slate-400">\u00B7</span>
                       <p className="text-xs text-slate-400">{r.date}</p>
                     </div>
                     <Stars rating={r.rating} />

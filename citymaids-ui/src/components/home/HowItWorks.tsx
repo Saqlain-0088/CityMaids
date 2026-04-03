@@ -42,7 +42,7 @@ export default function HowItWorks() {
           <span className="section-tag justify-center">Simple Process</span>
           <h2 className="section-title mb-4">How It Works</h2>
           <p className="text-slate-500 text-lg max-w-lg mx-auto">
-            Four simple steps to a cleaner, healthier home — no hassle, no guesswork.
+            Four simple steps to a cleaner, healthier home \u2014 no hassle, no guesswork.
           </p>
         </div>
 

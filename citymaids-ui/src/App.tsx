@@ -53,7 +53,7 @@ export default function App() {
         <Route path="/careers" element={<Careers />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        {/* Admin — Operations */}
+        {/* Admin \u2014 Operations */}
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/bookings" element={<AdminBookings />} />
         <Route path="/admin/services" element={<AdminServices />} />
@@ -62,7 +62,7 @@ export default function App() {
         <Route path="/admin/reviews" element={<AdminReviews />} />
         <Route path="/admin/leads" element={<AdminLeads />} />
         <Route path="/admin/settings" element={<AdminSettings />} />
-        {/* Admin — CMS */}
+        {/* Admin \u2014 CMS */}
         <Route path="/admin/cms/home" element={<CmsHome />} />
         <Route path="/admin/cms/about" element={<CmsAbout />} />
         <Route path="/admin/cms/services" element={<CmsServices />} />

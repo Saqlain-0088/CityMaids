@@ -1,4 +1,4 @@
-﻿import MainLayout from '../components/layout/MainLayout'
+\uFEFFimport MainLayout from '../components/layout/MainLayout'
 import HeroSection from '../components/home/HeroSection'
 import ServicesSection from '../components/home/ServicesSection'
 import AboutSection from '../components/home/AboutSection'

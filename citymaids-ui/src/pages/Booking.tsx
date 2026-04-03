@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+\uFEFFimport { useState } from 'react'
 import { useSearchParams, Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 import Button from '../components/ui/Button'
@@ -184,10 +184,10 @@ export default function Booking() {
           )}
 
           <div className="flex justify-between mt-8 pt-6 border-t border-slate-100">
-            <Button variant="ghost" className="border border-slate-200" onClick={() => setStep(s => s - 1)} disabled={step === 0} size="lg">â† Back</Button>
+            <Button variant="ghost" className="border border-slate-200" onClick={() => setStep(s => s - 1)} disabled={step === 0} size="lg">\u00E2\u2020\u0090 Back</Button>
             {step < STEPS.length - 1
-              ? <Button onClick={handleNext} disabled={!canNext()} size="lg">Continue â†’</Button>
-              : <Button onClick={() => setDone(true)} size="lg">Confirm Booking âœ“</Button>}
+              ? <Button onClick={handleNext} disabled={!canNext()} size="lg">Continue \u00E2\u2020\u2019</Button>
+              : <Button onClick={() => setDone(true)} size="lg">Confirm Booking \u00E2\u0153\u201C</Button>}
           </div>
         </div>
       </div>
