@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 
@@ -128,15 +128,9 @@ const services = [
 export default function Services() {
   const [active, setActive] = useState(0)
   const s = services[active]
-  const detailRef = useRef<HTMLDivElement>(null)
 
-  const selectService = (i: number) => {
-    setActive(i)
-    // Scroll to detail panel smoothly on mobile/tablet
-    setTimeout(() => {
-      detailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }, 50)
-  }
+  // Just swap content — no scroll. The sticky tab bar stays visible.
+  const selectService = (i: number) => setActive(i)
 
   return (
     <MainLayout>
@@ -188,7 +182,7 @@ export default function Services() {
       </div>
 
       {/* ── Service Detail Panel ── */}
-      <section ref={detailRef} className="bg-white py-16 scroll-mt-32">
+      <section className="bg-white py-16">
         <div className="container-xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
