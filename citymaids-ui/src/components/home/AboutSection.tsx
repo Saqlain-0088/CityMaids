@@ -32,7 +32,7 @@ export default function AboutSection() {
           <div className={`relative transition-all duration-700 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
             <div className="rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=85"
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=85"
                 alt="Professional cleaner at work"
                 className="w-full h-[500px] object-cover"
               />
