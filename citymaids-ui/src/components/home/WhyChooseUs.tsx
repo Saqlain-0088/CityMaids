@@ -5,37 +5,37 @@ const usps = [
   {
     title: 'Verified Staff',
     desc: 'Every cleaner is background-checked, identity-verified, and insured before joining our platform.',
-    icon: '\uD83D\uDEE1\uFE0F',
+    icon: '🛡️',
     color: 'bg-blue-50 text-blue-600',
   },
   {
     title: 'Safe Chemicals',
     desc: 'We use eco-friendly, non-toxic products that are safe for children, pets, and the environment.',
-    icon: '\u267B\uFE0F',
+    icon: '♻️',
     color: 'bg-teal-50 text-teal-600',
   },
   {
     title: 'On-Time Service',
     desc: 'We respect your schedule. Our cleaners arrive within the agreed time window, every single visit.',
-    icon: '\u23F0',
+    icon: '⏰',
     color: 'bg-primary-50 text-primary-600',
   },
   {
     title: 'Affordable Pricing',
-    desc: 'No hidden fees, no surprises. You see the full price before you book \u2014 and that\'s exactly what you pay.',
-    icon: '\uD83D\uDCB0',
+    desc: 'No hidden fees, no surprises. You see the full price before you book — and that\'s exactly what you pay.',
+    icon: '💰',
     color: 'bg-amber-50 text-amber-600',
   },
   {
     title: 'Satisfaction Guaranteed',
     desc: 'Not satisfied? Contact us within 24 hours and we\'ll send a team back to re-clean at no extra charge.',
-    icon: '\u2705',
+    icon: '✅',
     color: 'bg-green-50 text-green-600',
   },
   {
     title: 'Easy Online Booking',
     desc: 'Book, reschedule, or cancel in minutes from any device. No phone calls, no waiting.',
-    icon: '\uD83D\uDCF1',
+    icon: '📱',
     color: 'bg-violet-50 text-violet-600',
   },
 ]
@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
                 Why will you choose<br />our service?
               </h2>
               <p className="text-slate-500 mb-8 leading-relaxed">
-                We're not just a cleaning service \u2014 we're your trusted home care partner. Here's what sets us apart.
+                We're not just a cleaning service — we're your trusted home care partner. Here's what sets us apart.
               </p>
             </motion.div>
 

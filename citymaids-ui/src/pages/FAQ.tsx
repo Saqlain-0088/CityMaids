@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 
 const categories = [
-  { title: 'Booking & Scheduling', icon: '\uD83D\uDCC5', faqs: [
+  { title: 'Booking & Scheduling', icon: '📅', faqs: [
     { q: 'How do I book a cleaning service?', a: 'Click "Book Now", select your service, choose a date and time, fill in your details, and confirm. The whole process takes under 2 minutes.' },
     { q: 'Can I book same-day cleaning?', a: 'Yes! We offer same-day bookings subject to availability. Book before 10 AM for same-day service in most areas.' },
     { q: 'Can I reschedule or cancel?', a: 'Yes. You can reschedule or cancel up to 24 hours before your appointment without any charge.' },
     { q: 'Do I need to be home during the cleaning?', a: 'No. Many customers provide access instructions. Our cleaners are fully insured and trusted.' },
   ]},
-  { title: 'Our Cleaners', icon: '\uD83D\uDC65', faqs: [
+  { title: 'Our Cleaners', icon: '👥', faqs: [
     { q: 'Are your cleaners background-checked?', a: 'Yes. Every CityMaids cleaner goes through a thorough background check, identity verification, and in-person interview.' },
     { q: 'Are your cleaners insured?', a: 'All our cleaners are fully insured and bonded. In the unlikely event of any damage, you are fully protected.' },
     { q: 'Will I get the same cleaner each time?', a: 'We try our best to send the same cleaner for recurring bookings. You can also request a specific cleaner.' },
   ]},
-  { title: 'Services & Supplies', icon: '\uD83E\uDDB9', faqs: [
+  { title: 'Services & Supplies', icon: '🦹', faqs: [
     { q: 'Do I need to provide cleaning supplies?', a: 'No. Our cleaners bring all necessary supplies and equipment. If you prefer specific products, let us know in the booking notes.' },
     { q: 'Do you use eco-friendly products?', a: 'Yes. We use environmentally responsible, non-toxic products that are safe for children, pets, and the planet.' },
     { q: 'How long does a cleaning take?', a: 'Standard: 2-3 hours. Deep cleaning: 4-6 hours. Move-in/out: 5-7 hours. Times vary based on home size.' },
   ]},
-  { title: 'Pricing & Payment', icon: '\uD83D\uDCB3', faqs: [
+  { title: 'Pricing & Payment', icon: '💳', faqs: [
     { q: 'Are there any hidden fees?', a: 'Never. The price you see is the price you pay. No hidden charges, no surprise fees after the service.' },
     { q: 'What payment methods do you accept?', a: 'We accept all major credit/debit cards, Apple Pay, Google Pay, and bank transfers.' },
     { q: 'What if I am not satisfied?', a: 'We offer a 100% satisfaction guarantee. Contact us within 24 hours and we will send a team back to re-clean at no extra charge.' },

@@ -47,7 +47,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <p className="font-bold text-dark-900 text-sm">Just Completed</p>
-                  <p className="text-dark-400 text-xs">Deep clean \u00B7 Park Avenue</p>
+                  <p className="text-dark-400 text-xs">Deep clean · Park Avenue</p>
                 </div>
               </div>
               <div className="flex gap-0.5">
@@ -77,7 +77,7 @@ export default function AboutSection() {
               <span className="text-gradient">Built on Trust</span>
             </h2>
             <p className="text-dark-500 leading-relaxed mb-4">
-              Founded in 2020, CityMaids has grown from a small team of 5 cleaners to one of New York City's most trusted home cleaning platforms \u2014 connecting homeowners with vetted, insured professionals.
+              Founded in 2020, CityMaids has grown from a small team of 5 cleaners to one of New York City's most trusted home cleaning platforms — connecting homeowners with vetted, insured professionals.
             </p>
             <p className="text-dark-500 leading-relaxed mb-8">
               Every cleaner on our platform is background-checked, trained to our standards, and equipped with eco-friendly products that are safe for your family and pets.

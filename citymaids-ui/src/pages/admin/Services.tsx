@@ -6,7 +6,7 @@ import Modal from '../../components/ui/Modal'
 import { Input, Textarea } from '../../components/ui/Input'
 import { services as initial, Service } from '../../data/services'
 
-const empty: Partial<Service> = { name: '', shortDescription: '', description: '', price: 0, duration: 2, icon: '\uD83E\uDDF9', isActive: true }
+const empty: Partial<Service> = { name: '', shortDescription: '', description: '', price: 0, duration: 2, icon: '🧹', isActive: true }
 
 export default function AdminServices() {
   const [list, setList] = useState(initial)
@@ -42,7 +42,7 @@ export default function AdminServices() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h1 className="text-2xl font-extrabold text-slate-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Services</h1>
-            <p className="text-slate-500 text-sm mt-0.5">{list.filter(s => s.isActive).length} active \u00B7 {list.length} total</p>
+            <p className="text-slate-500 text-sm mt-0.5">{list.filter(s => s.isActive).length} active · {list.length} total</p>
           </div>
           <Button onClick={openCreate}>
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>

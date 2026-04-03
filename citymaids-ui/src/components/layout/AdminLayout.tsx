@@ -117,7 +117,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         <div className='fixed inset-0 z-20 bg-slate-950/50 backdrop-blur-sm lg:hidden' onClick={close} />
       )}
 
-      {/* \u2500\u2500 Sidebar \u2500\u2500 */}
+      {/* ── Sidebar ── */}
       <aside className={`fixed inset-y-0 left-0 z-30 w-64 bg-white border-r border-slate-100 flex flex-col transform transition-transform duration-300 lg:translate-x-0 lg:static lg:inset-auto ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
 
         {/* Logo */}
@@ -139,7 +139,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           {/* Operations accordion */}
           <AccordionSection
             title='Operations'
-            icon='\u2699\uFE0F'
+            icon='⚙️'
             items={ops}
             isActive={isActive}
             defaultOpen={isOpsActive}
@@ -151,7 +151,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
           {/* CMS accordion */}
           <AccordionSection
             title='Content (CMS)'
-            icon='\uD83D\uDCDD'
+            icon='📝'
             items={cms}
             isActive={isActive}
             defaultOpen={isCmsActive}
@@ -160,7 +160,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
 
           <div className='mx-3 border-t border-slate-100' />
 
-          {/* Settings \u2014 standalone */}
+          {/* Settings — standalone */}
           <Link to='/admin/settings' onClick={close}
             className={`flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium transition-all group ${isActive('/admin/settings') ? 'bg-brand-50 text-brand-700' : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'}`}>
             <svg className={`w-4 h-4 flex-shrink-0 ${isActive('/admin/settings') ? 'text-brand-600' : 'text-slate-400 group-hover:text-slate-600'}`} fill='none' viewBox='0 0 24 24' stroke='currentColor'>
@@ -189,7 +189,7 @@ export default function AdminLayout({ children }: { children: ReactNode }) {
         </div>
       </aside>
 
-      {/* \u2500\u2500 Main \u2500\u2500 */}
+      {/* ── Main ── */}
       <div className='flex-1 flex flex-col min-w-0'>
 
         {/* Top navbar */}

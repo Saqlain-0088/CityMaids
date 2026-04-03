@@ -44,9 +44,9 @@ export default function StaffDashboard() {
                     <StatusBadge status={job.status} />
                   </div>
                   <div className="space-y-1.5 text-sm text-slate-500 mb-4">
-                    <p>\uD83D\uDCC5 {job.scheduledAt}</p>
-                    <p>\uD83D\uDCC5\u008D {job.address}</p>
-                    <p>\uD83D\uDCC5\u017E {job.customerPhone}</p>
+                    <p>📅 {job.scheduledAt}</p>
+                    <p>📅 {job.address}</p>
+                    <p>📅ž {job.customerPhone}</p>
                   </div>
                   <div className="flex gap-2">
                     <Button size="sm" variant="ghost" className="border border-slate-200" onClick={() => setSelected(job)}>Details</Button>
@@ -65,7 +65,7 @@ export default function StaffDashboard() {
               {completed.map(job => (
                 <div key={job.id} className="bg-white rounded-2xl border border-slate-100 shadow-card p-4 opacity-70">
                   <div className="flex items-center justify-between">
-                    <div><p className="font-medium text-slate-900 text-sm">{job.serviceName}</p><p className="text-xs text-slate-400">{job.customerName} \u2022 {job.scheduledAt}</p></div>
+                    <div><p className="font-medium text-slate-900 text-sm">{job.serviceName}</p><p className="text-xs text-slate-400">{job.customerName} • {job.scheduledAt}</p></div>
                     <StatusBadge status={job.status} />
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export default function StaffDashboard() {
 
         {jobs.length === 0 && (
           <div className="text-center py-16 text-slate-400">
-            <p className="text-4xl mb-3">\uD83D\uDCC5\u2039</p>
+            <p className="text-4xl mb-3">📅‹</p>
             <p className="font-medium">No jobs assigned yet</p>
             <p className="text-sm">Check back later for new assignments.</p>
           </div>

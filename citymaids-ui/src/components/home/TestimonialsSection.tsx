@@ -4,12 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from '../../hooks/useInView'
 
 const testimonials = [
-  { id: 1, name: 'Sarah Johnson', role: 'Homeowner \u00B7 Manhattan', rating: 5, text: 'CityMaids transformed my apartment. The deep cleaning was absolutely thorough \u2014 every corner spotless. I\'ve been using them monthly ever since.', service: 'Deep Cleaning', avatar: 'SJ', color: 'from-blue-400 to-blue-600' },
-  { id: 2, name: 'James Wilson', role: 'Tenant \u00B7 Brooklyn', rating: 5, text: 'Incredibly professional team. They arrived on time, worked efficiently, and left my home looking brand new. The move-out clean got my full deposit back.', service: 'Move Out Cleaning', avatar: 'JW', color: 'from-teal-400 to-teal-600' },
-  { id: 3, name: 'Emily Chen', role: 'Business Owner \u00B7 Queens', rating: 5, text: 'Seamless booking and thorough staff. My office has never looked better. I\'ve already set up a recurring weekly schedule.', service: 'Office Cleaning', avatar: 'EC', color: 'from-violet-400 to-violet-600' },
-  { id: 4, name: 'Michael Brown', role: 'Homeowner \u00B7 Staten Island', rating: 5, text: 'The carpet cleaning was exceptional. Stains I thought were permanent are completely gone. Professional, on time, and results exceeded expectations.', service: 'Carpet Cleaning', avatar: 'MB', color: 'from-amber-400 to-amber-600' },
-  { id: 5, name: 'Amanda Davis', role: 'Renter \u00B7 Bronx', rating: 5, text: 'I\'ve tried many cleaning services but CityMaids is by far the best. Consistent quality, reliable staff, and great communication throughout.', service: 'Standard Cleaning', avatar: 'AD', color: 'from-rose-400 to-rose-600' },
-  { id: 6, name: 'Robert Martinez', role: 'Contractor \u00B7 Hoboken', rating: 5, text: 'Used them for post-construction cleanup. They handled everything perfectly \u2014 dust, debris, everything. The result was immaculate.', service: 'Post-Construction', avatar: 'RM', color: 'from-primary-400 to-primary-600' },
+  { id: 1, name: 'Sarah Johnson', role: 'Homeowner · Manhattan', rating: 5, text: 'CityMaids transformed my apartment. The deep cleaning was absolutely thorough — every corner spotless. I\'ve been using them monthly ever since.', service: 'Deep Cleaning', avatar: 'SJ', color: 'from-blue-400 to-blue-600' },
+  { id: 2, name: 'James Wilson', role: 'Tenant · Brooklyn', rating: 5, text: 'Incredibly professional team. They arrived on time, worked efficiently, and left my home looking brand new. The move-out clean got my full deposit back.', service: 'Move Out Cleaning', avatar: 'JW', color: 'from-teal-400 to-teal-600' },
+  { id: 3, name: 'Emily Chen', role: 'Business Owner · Queens', rating: 5, text: 'Seamless booking and thorough staff. My office has never looked better. I\'ve already set up a recurring weekly schedule.', service: 'Office Cleaning', avatar: 'EC', color: 'from-violet-400 to-violet-600' },
+  { id: 4, name: 'Michael Brown', role: 'Homeowner · Staten Island', rating: 5, text: 'The carpet cleaning was exceptional. Stains I thought were permanent are completely gone. Professional, on time, and results exceeded expectations.', service: 'Carpet Cleaning', avatar: 'MB', color: 'from-amber-400 to-amber-600' },
+  { id: 5, name: 'Amanda Davis', role: 'Renter · Bronx', rating: 5, text: 'I\'ve tried many cleaning services but CityMaids is by far the best. Consistent quality, reliable staff, and great communication throughout.', service: 'Standard Cleaning', avatar: 'AD', color: 'from-rose-400 to-rose-600' },
+  { id: 6, name: 'Robert Martinez', role: 'Contractor · Hoboken', rating: 5, text: 'Used them for post-construction cleanup. They handled everything perfectly — dust, debris, everything. The result was immaculate.', service: 'Post-Construction', avatar: 'RM', color: 'from-primary-400 to-primary-600' },
 ]
 
 function Stars({ n }: { n: number }) {
@@ -107,7 +107,7 @@ export default function TestimonialsSection() {
 
         <div className="text-center mt-8">
           <Link to="/testimonials" className="text-sm text-primary-600 font-semibold hover:text-primary-700 transition-colors">
-            Read all 2,000+ reviews \u2192
+            Read all 2,000+ reviews →
           </Link>
         </div>
       </div>

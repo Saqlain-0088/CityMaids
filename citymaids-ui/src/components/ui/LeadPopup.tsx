@@ -31,7 +31,7 @@ export default function LeadPopup() {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
           <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mx-auto mb-4">
-            <span className="text-3xl">{"\uD83C\uDF81"}</span>
+            <span className="text-3xl">{"🎁"}</span>
           </div>
           <h3 className="text-2xl font-extrabold text-white mb-1" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Get 10% Off</h3>
           <p className="text-primary-100 text-sm">Your first cleaning service</p>

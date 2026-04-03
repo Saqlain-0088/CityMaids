@@ -63,12 +63,12 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: '\uD83D\uDEE1\uFE0F', title: 'Trust & Safety', desc: 'Every cleaner is background-checked, identity-verified, and insured before joining our platform.' },
-              { icon: '\u2B50', title: 'Quality First', desc: 'We maintain strict quality standards and follow up after every service to ensure satisfaction.' },
-              { icon: '\uD83C\uDF3F', title: 'Eco-Friendly', desc: 'We use environmentally safe products that are tough on dirt but gentle on your family and pets.' },
-              { icon: '\uD83D\uDCF1', title: 'Easy Booking', desc: 'Book, reschedule, or cancel in minutes through our simple online platform \u2014 no calls needed.' },
-              { icon: '\uD83D\uDCB0', title: 'Fair Pricing', desc: 'Transparent, competitive pricing with zero hidden fees. You always know exactly what you\'re paying.' },
-              { icon: '\u00F0\u0178\u00A4\u009D', title: 'Community', desc: 'We support local cleaners with fair wages, flexible hours, and growth opportunities.' },
+              { icon: '🛡️', title: 'Trust & Safety', desc: 'Every cleaner is background-checked, identity-verified, and insured before joining our platform.' },
+              { icon: '⭐', title: 'Quality First', desc: 'We maintain strict quality standards and follow up after every service to ensure satisfaction.' },
+              { icon: '🌿', title: 'Eco-Friendly', desc: 'We use environmentally safe products that are tough on dirt but gentle on your family and pets.' },
+              { icon: '📱', title: 'Easy Booking', desc: 'Book, reschedule, or cancel in minutes through our simple online platform — no calls needed.' },
+              { icon: '💰', title: 'Fair Pricing', desc: 'Transparent, competitive pricing with zero hidden fees. You always know exactly what you\'re paying.' },
+              { icon: '🤝', title: 'Community', desc: 'We support local cleaners with fair wages, flexible hours, and growth opportunities.' },
             ].map(v => (
               <div key={v.title} className="card p-6 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
                 <div className="text-3xl mb-3">{v.icon}</div>

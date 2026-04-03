@@ -29,7 +29,7 @@ export default function StaffLayout({ children }: { children: ReactNode }) {
         </div>
         <nav className="max-w-4xl mx-auto px-4 sm:px-6 flex gap-1 pb-2">
           <Link to="/staff" className={`flex items-center gap-2 px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${pathname === '/staff' ? 'bg-brand-50 text-brand-700' : 'text-dark-600 hover:bg-dark-50'}`}>
-            \uD83D\uDCCB My Jobs
+            📋 My Jobs
           </Link>
         </nav>
       </header>

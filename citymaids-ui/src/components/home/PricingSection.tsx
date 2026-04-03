@@ -15,7 +15,7 @@ const plans = [
     name: 'Standard',
     coverage: '2 BHK',
     price: 149,
-    desc: 'Our most popular \u2014 thorough deep clean.',
+    desc: 'Our most popular — thorough deep clean.',
     popular: true,
     features: ['Up to 4 hours', 'Everything in Basic', 'Inside oven & fridge', 'Baseboards & sills', 'Cabinet interiors', 'Deep scrub bathrooms'],
     missing: ['Priority scheduling'],
@@ -66,7 +66,7 @@ export default function PricingSection() {
               <div className="p-8 flex flex-col flex-1">
                 {plan.popular && (
                   <span className="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 self-start">
-                    \u2B50 Most Popular
+                    ⭐ Most Popular
                   </span>
                 )}
 

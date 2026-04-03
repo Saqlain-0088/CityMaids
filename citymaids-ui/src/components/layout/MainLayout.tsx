@@ -7,7 +7,7 @@ import LeadPopup from '../ui/LeadPopup'
 
 export default function MainLayout({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
-  // Home page hero overlaps the transparent header \u2014 no spacer needed
+  // Home page hero overlaps the transparent header — no spacer needed
   const isHome = pathname === '/'
 
   return (

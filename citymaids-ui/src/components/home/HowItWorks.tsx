@@ -6,28 +6,28 @@ const steps = [
     step: '01',
     title: 'Select Service',
     desc: 'Choose from our range of professional cleaning services that fits your home.',
-    icon: '\uD83E\uDDB9',
+    icon: '🦹',
     color: 'bg-blue-50 text-blue-600 border-blue-100',
   },
   {
     step: '02',
     title: 'Choose Time Slot',
     desc: 'Pick your preferred date and time. Booking takes under 60 seconds.',
-    icon: '\uD83D\uDCC5',
+    icon: '📅',
     color: 'bg-primary-50 text-primary-600 border-primary-100',
   },
   {
     step: '03',
     title: 'Confirm Booking',
     desc: 'Review your details and confirm. You\'ll get an instant confirmation.',
-    icon: '\u2705',
+    icon: '✅',
     color: 'bg-teal-50 text-teal-600 border-teal-100',
   },
   {
     step: '04',
     title: 'Get Service Delivered',
     desc: 'Our vetted professional arrives on time and delivers a spotless result.',
-    icon: '\uD83C\uDFE0',
+    icon: '🏠',
     color: 'bg-cta-50 text-cta-600 border-cta-100',
   },
 ]
@@ -42,7 +42,7 @@ export default function HowItWorks() {
           <span className="section-tag justify-center">Simple Process</span>
           <h2 className="section-title mb-4">How It Works</h2>
           <p className="text-slate-500 text-lg max-w-lg mx-auto">
-            Four simple steps to a cleaner, healthier home \u2014 no hassle, no guesswork.
+            Four simple steps to a cleaner, healthier home — no hassle, no guesswork.
           </p>
         </div>
 

@@ -122,7 +122,7 @@ export default function AdminCustomers() {
           {/* Pagination */}
           <div className="flex items-center justify-between px-4 py-3.5 border-t border-slate-100 bg-slate-50">
             <p className="text-xs text-slate-500">
-              Showing {Math.min((page - 1) * PAGE_SIZE + 1, filtered.length)}\u2013{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}
+              Showing {Math.min((page - 1) * PAGE_SIZE + 1, filtered.length)}–{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}
             </p>
             <div className="flex items-center gap-1">
               <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1}

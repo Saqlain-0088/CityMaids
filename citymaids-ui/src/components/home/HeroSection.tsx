@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 const HERO_IMG = 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&q=90'
 
 const trustItems = [
-  { icon: '\u2B50', value: '4.8/5', label: 'Rating' },
-  { icon: '\uD83C\uDFE0', value: '10,000+', label: 'Homes Cleaned' },
-  { icon: '\uD83D\uDEE1\uFE0F', value: '100%', label: 'Verified Staff' },
+  { icon: '⭐', value: '4.8/5', label: 'Rating' },
+  { icon: '🏠', value: '10,000+', label: 'Homes Cleaned' },
+  { icon: '🛡️', value: '100%', label: 'Verified Staff' },
 ]
 
 export default function HeroSection() {
@@ -24,7 +24,7 @@ export default function HeroSection() {
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
               <span className="inline-flex items-center gap-2 bg-cta-500/15 border border-cta-400/30 text-cta-300 text-sm font-semibold px-4 py-2 rounded-full mb-7">
                 <span className="w-2 h-2 bg-cta-400 rounded-full animate-pulse" />
-                \uD83D\uDD25 Limited slots \u2014 10% off first booking
+                🔥 Limited slots — 10% off first booking
               </span>
             </motion.div>
 
@@ -55,7 +55,7 @@ export default function HeroSection() {
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                Book Now \u2014 From $79
+                Book Now — From $79
               </Link>
               <Link to="/services"
                 className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold rounded-2xl px-8 py-4 text-base transition-all duration-200 backdrop-blur-sm">
@@ -95,7 +95,7 @@ export default function HeroSection() {
 
             {/* Floating cards */}
             <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-card-hover p-4 hidden md:flex items-center gap-3 border border-slate-100">
-              <div className="w-11 h-11 rounded-xl bg-teal-100 flex items-center justify-center text-xl flex-shrink-0">\u2705</div>
+              <div className="w-11 h-11 rounded-xl bg-teal-100 flex items-center justify-center text-xl flex-shrink-0">✅</div>
               <div>
                 <p className="font-bold text-slate-900 text-sm">Satisfaction</p>
                 <p className="text-teal-600 font-semibold text-xs">100% Guaranteed</p>
@@ -103,7 +103,7 @@ export default function HeroSection() {
             </div>
 
             <div className="absolute -top-4 -right-4 bg-white rounded-2xl shadow-card-hover p-4 hidden md:flex items-center gap-3 border border-slate-100">
-              <div className="w-11 h-11 rounded-xl bg-primary-100 flex items-center justify-center text-xl flex-shrink-0">\uD83D\uDEE1\uFE0F</div>
+              <div className="w-11 h-11 rounded-xl bg-primary-100 flex items-center justify-center text-xl flex-shrink-0">🛡️</div>
               <div>
                 <p className="font-bold text-slate-900 text-sm">Background</p>
                 <p className="text-primary-600 font-semibold text-xs">Verified Staff</p>
