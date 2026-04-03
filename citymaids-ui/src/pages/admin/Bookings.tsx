@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import AdminLayout from '../../components/layout/AdminLayout'
 import { StatusBadge } from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
@@ -155,7 +155,7 @@ export default function AdminBookings() {
                         )}
                         {nextStatus[b.status] && b.status !== 'confirmed' && (
                           <Button size="xs" onClick={() => updateStatus(b.id, nextStatus[b.status]!)}>
-                            â†’ {nextStatus[b.status]?.replace('_', ' ')}
+                            Ã¢â€ â€™ {nextStatus[b.status]?.replace('_', ' ')}
                           </Button>
                         )}
                       </div>
@@ -169,7 +169,7 @@ export default function AdminBookings() {
           {/* Pagination */}
           <div className="flex items-center justify-between px-4 py-3.5 border-t border-slate-100 bg-slate-50">
             <p className="text-xs text-slate-500">
-              Showing {Math.min((page - 1) * PAGE_SIZE + 1, filtered.length)}â€“{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}
+              Showing {Math.min((page - 1) * PAGE_SIZE + 1, filtered.length)}Ã¢â‚¬â€œ{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}
             </p>
             <div className="flex items-center gap-1">
               <button
@@ -265,7 +265,7 @@ export default function AdminBookings() {
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold text-slate-900 text-sm">{s.name}</p>
-                  <p className="text-xs text-slate-400">{s.jobsCompleted} jobs Â· {s.rating}â˜…</p>
+                  <p className="text-xs text-slate-400">{s.jobsCompleted} jobs Ã‚Â· {s.rating}Ã¢Ëœâ€¦</p>
                 </div>
               </label>
             ))}

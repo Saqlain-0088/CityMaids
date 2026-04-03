@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import Button from '../components/ui/Button'
 import { Input, Textarea } from '../components/ui/Input'
@@ -30,7 +30,7 @@ export default function Careers() {
                   <h3 className="font-bold text-slate-900 text-lg">{job.title}</h3>
                   <div className="flex flex-wrap gap-2 mt-1 mb-2">
                     <span className="badge badge-brand">{job.type}</span>
-                    <span className="badge badge-dark">ðŸ“ {job.location}</span>
+                    <span className="badge badge-dark">Ã°Å¸â€œÂ {job.location}</span>
                   </div>
                   <p className="text-sm text-slate-500">{job.desc}</p>
                 </div>
@@ -47,7 +47,7 @@ export default function Careers() {
                   <svg className="w-8 h-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">Application Submitted!</h3>
-                <p className="text-slate-500 text-sm">We'll review your application and get back to you within 3â€“5 business days.</p>
+                <p className="text-slate-500 text-sm">We'll review your application and get back to you within 3Ã¢â‚¬â€œ5 business days.</p>
               </div>
             ) : (
               <div className="space-y-4">

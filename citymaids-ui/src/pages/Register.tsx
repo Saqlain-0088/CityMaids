@@ -57,7 +57,7 @@ export default function Register() {
         <div className="bg-white rounded-3xl border border-slate-100 shadow-card p-7 space-y-4">
           <Input label="Full Name" placeholder="John Smith" value={form.name} required error={touched.name ? errors.name : undefined} success={touched.name && !errors.name && !!form.name} onChange={e => set('name', e.target.value)} onBlur={() => { touch('name'); validate(form) }} />
           <Input label="Email Address" type="email" placeholder="you@example.com" value={form.email} required error={touched.email ? errors.email : undefined} success={touched.email && !errors.email && !!form.email} onChange={e => set('email', e.target.value)} onBlur={() => { touch('email'); validate(form) }} />
-          <Input label="Phone Number" placeholder="+1 555-0000" value={form.phone} error={touched.phone ? errors.phone : undefined} success={touched.phone && !errors.phone && !!form.phone} onChange={e => set('phone', e.target.value)} onBlur={() => { touch('phone'); validate(form) }} hint="Optional â€” for WhatsApp updates" />
+          <Input label="Phone Number" placeholder="+1 555-0000" value={form.phone} error={touched.phone ? errors.phone : undefined} success={touched.phone && !errors.phone && !!form.phone} onChange={e => set('phone', e.target.value)} onBlur={() => { touch('phone'); validate(form) }} hint="Optional - for WhatsApp updates" />
           <div>
             <Input label="Password" type="password" placeholder="Min. 8 characters" value={form.password} required error={touched.password ? errors.password : undefined} onChange={e => set('password', e.target.value)} onBlur={() => { touch('password'); validate(form) }} />
             {form.password && (

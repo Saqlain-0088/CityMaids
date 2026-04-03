@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import { Input, Textarea, Select } from '../components/ui/Input'
 
@@ -25,7 +25,7 @@ export default function Contact() {
                 <h2 className='text-2xl font-extrabold text-slate-900 mb-3' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We are Here to Help</h2>
                 <p className='text-slate-500 leading-relaxed'>Our team is available 7 days a week to answer your questions and help you book the perfect cleaning service.</p>
               </div>
-              {[{ icon: 'ðŸ“', title: 'Our Office', value: '123 Clean Street, New York, NY 10001', sub: 'Monâ€“Fri: 8AMâ€“8PM' }, { icon: 'ðŸ“ž', title: 'Phone', value: '+1 (555) 000-1234', sub: 'Available 7 days a week' }, { icon: 'âœ‰ï¸', title: 'Email', value: 'hello@citymaids.com', sub: 'We reply within 2 hours' }, { icon: 'ðŸ’¬', title: 'WhatsApp', value: '+1 (555) 000-1234', sub: 'Instant response' }].map(item => (
+              {[{ icon: 'Ã°Å¸â€œÂ', title: 'Our Office', value: '123 Clean Street, New York, NY 10001', sub: 'MonÃ¢â‚¬â€œFri: 8AMÃ¢â‚¬â€œ8PM' }, { icon: 'Ã°Å¸â€œÅ¾', title: 'Phone', value: '+1 (555) 000-1234', sub: 'Available 7 days a week' }, { icon: 'Ã¢Å“â€°Ã¯Â¸Â', title: 'Email', value: 'hello@citymaids.com', sub: 'We reply within 2 hours' }, { icon: 'Ã°Å¸â€™Â¬', title: 'WhatsApp', value: '+1 (555) 000-1234', sub: 'Instant response' }].map(item => (
                 <div key={item.title} className='flex items-start gap-4 p-4 bg-slate-50 rounded-2xl hover:bg-primary-50 transition-colors group'>
                   <div className='w-12 h-12 rounded-xl bg-primary-100 group-hover:bg-primary-500 flex items-center justify-center text-xl flex-shrink-0 transition-colors'>{item.icon}</div>
                   <div><p className='font-bold text-slate-900 text-sm'>{item.title}</p><p className='text-slate-700 text-sm font-medium'>{item.value}</p><p className='text-slate-400 text-xs mt-0.5'>{item.sub}</p></div>
@@ -38,7 +38,7 @@ export default function Contact() {
               </a>
               <div className='bg-slate-100 rounded-2xl overflow-hidden h-48'>
                 <div className='w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-200 to-slate-300'>
-                  <div className='text-center'><p className='text-4xl mb-2'>ðŸ“</p><p className='text-slate-600 font-semibold text-sm'>123 Clean Street, New York</p><p className='text-slate-400 text-xs'>Google Maps</p></div>
+                  <div className='text-center'><p className='text-4xl mb-2'>Ã°Å¸â€œÂ</p><p className='text-slate-600 font-semibold text-sm'>123 Clean Street, New York</p><p className='text-slate-400 text-xs'>Google Maps</p></div>
                 </div>
               </div>
             </div>

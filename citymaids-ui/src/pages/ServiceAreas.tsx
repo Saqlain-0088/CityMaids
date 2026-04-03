@@ -1,13 +1,13 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 
 const areas = [
-  { name: 'Manhattan', icon: 'ðŸ™ï¸', neighborhoods: ['Upper East Side', 'Upper West Side', 'Midtown', 'Chelsea', 'SoHo', 'Tribeca', 'Financial District', 'Harlem'] },
-  { name: 'Brooklyn', icon: 'ðŸŒ‰', neighborhoods: ['Park Slope', 'Williamsburg', 'DUMBO', 'Brooklyn Heights', 'Bushwick', 'Crown Heights', 'Bay Ridge'] },
-  { name: 'Queens', icon: 'âœˆï¸', neighborhoods: ['Astoria', 'Long Island City', 'Flushing', 'Forest Hills', 'Jackson Heights', 'Bayside'] },
-  { name: 'Bronx', icon: 'ðŸŒ³', neighborhoods: ['Riverdale', 'Fordham', 'Pelham Bay', 'Mott Haven', 'Throgs Neck'] },
-  { name: 'Staten Island', icon: 'â›´ï¸', neighborhoods: ['St. George', 'Stapleton', 'New Dorp', 'Tottenville', 'Great Kills'] },
-  { name: 'New Jersey', icon: 'ðŸŒ†', neighborhoods: ['Hoboken', 'Jersey City', 'Weehawken', 'Union City', 'Bayonne'] },
+  { name: 'Manhattan', icon: 'Ã°Å¸Ââ„¢Ã¯Â¸Â', neighborhoods: ['Upper East Side', 'Upper West Side', 'Midtown', 'Chelsea', 'SoHo', 'Tribeca', 'Financial District', 'Harlem'] },
+  { name: 'Brooklyn', icon: 'Ã°Å¸Å’â€°', neighborhoods: ['Park Slope', 'Williamsburg', 'DUMBO', 'Brooklyn Heights', 'Bushwick', 'Crown Heights', 'Bay Ridge'] },
+  { name: 'Queens', icon: 'Ã¢Å“Ë†Ã¯Â¸Â', neighborhoods: ['Astoria', 'Long Island City', 'Flushing', 'Forest Hills', 'Jackson Heights', 'Bayside'] },
+  { name: 'Bronx', icon: 'Ã°Å¸Å’Â³', neighborhoods: ['Riverdale', 'Fordham', 'Pelham Bay', 'Mott Haven', 'Throgs Neck'] },
+  { name: 'Staten Island', icon: 'Ã¢â€ºÂ´Ã¯Â¸Â', neighborhoods: ['St. George', 'Stapleton', 'New Dorp', 'Tottenville', 'Great Kills'] },
+  { name: 'New Jersey', icon: 'Ã°Å¸Å’â€ ', neighborhoods: ['Hoboken', 'Jersey City', 'Weehawken', 'Union City', 'Bayonne'] },
 ]
 
 export default function ServiceAreas() {

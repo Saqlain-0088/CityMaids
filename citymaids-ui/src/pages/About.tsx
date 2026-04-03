@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 import Button from '../components/ui/Button'
 import { useInView, useCountUp } from '../hooks/useInView'
@@ -63,12 +63,12 @@ export default function About() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: 'ðŸ›¡ï¸', title: 'Trust & Safety', desc: 'Every cleaner is background-checked, identity-verified, and insured before joining our platform.' },
-              { icon: 'â­', title: 'Quality First', desc: 'We maintain strict quality standards and follow up after every service to ensure satisfaction.' },
-              { icon: 'ðŸŒ¿', title: 'Eco-Friendly', desc: 'We use environmentally safe products that are tough on dirt but gentle on your family and pets.' },
-              { icon: 'ðŸ“±', title: 'Easy Booking', desc: 'Book, reschedule, or cancel in minutes through our simple online platform â€” no calls needed.' },
-              { icon: 'ðŸ’°', title: 'Fair Pricing', desc: 'Transparent, competitive pricing with zero hidden fees. You always know exactly what you\'re paying.' },
-              { icon: 'ðŸ¤', title: 'Community', desc: 'We support local cleaners with fair wages, flexible hours, and growth opportunities.' },
+              { icon: 'Ã°Å¸â€ºÂ¡Ã¯Â¸Â', title: 'Trust & Safety', desc: 'Every cleaner is background-checked, identity-verified, and insured before joining our platform.' },
+              { icon: 'Ã¢Â­Â', title: 'Quality First', desc: 'We maintain strict quality standards and follow up after every service to ensure satisfaction.' },
+              { icon: 'Ã°Å¸Å’Â¿', title: 'Eco-Friendly', desc: 'We use environmentally safe products that are tough on dirt but gentle on your family and pets.' },
+              { icon: 'Ã°Å¸â€œÂ±', title: 'Easy Booking', desc: 'Book, reschedule, or cancel in minutes through our simple online platform Ã¢â‚¬â€ no calls needed.' },
+              { icon: 'Ã°Å¸â€™Â°', title: 'Fair Pricing', desc: 'Transparent, competitive pricing with zero hidden fees. You always know exactly what you\'re paying.' },
+              { icon: 'Ã°Å¸Â¤Â', title: 'Community', desc: 'We support local cleaners with fair wages, flexible hours, and growth opportunities.' },
             ].map(v => (
               <div key={v.title} className="card p-6 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
                 <div className="text-3xl mb-3">{v.icon}</div>

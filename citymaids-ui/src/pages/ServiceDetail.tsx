@@ -1,8 +1,8 @@
-﻿import { useParams, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 import { services } from '../data/services'
 
-const processSteps = ['We confirm your booking and send a reminder 24h before.', 'Our vetted cleaner arrives on time with all supplies.', 'We clean thoroughly following our quality checklist.', 'You inspect the results â€” we guarantee your satisfaction.']
+const processSteps = ['We confirm your booking and send a reminder 24h before.', 'Our vetted cleaner arrives on time with all supplies.', 'We clean thoroughly following our quality checklist.', 'You inspect the results Ã¢â‚¬â€ we guarantee your satisfaction.']
 
 export default function ServiceDetail() {
   const { slug } = useParams()
@@ -11,7 +11,7 @@ export default function ServiceDetail() {
   if (!service) return (
     <MainLayout>
       <div className='container-xl py-20 text-center'>
-        <p className='text-5xl mb-4'>ðŸ”</p>
+        <p className='text-5xl mb-4'>Ã°Å¸â€Â</p>
         <h2 className='text-2xl font-bold text-slate-900 mb-2'>Service Not Found</h2>
         <Link to='/services' className='btn-primary mt-4 inline-flex'>Browse All Services</Link>
       </div>
@@ -42,12 +42,12 @@ export default function ServiceDetail() {
               </div>
             </div>
             <div className='lg:pt-2'>
-              {service.isPopular && <span className='inline-flex items-center gap-1.5 bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4'>â­ Most Popular</span>}
+              {service.isPopular && <span className='inline-flex items-center gap-1.5 bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4'>Ã¢Â­Â Most Popular</span>}
               <h1 className='text-4xl font-extrabold text-slate-900 mb-3' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{service.name}</h1>
               <div className='flex items-center gap-4 mb-5'>
                 <span className='text-4xl font-extrabold text-primary-600'>${service.price}</span>
                 <span className='text-slate-300'>|</span>
-                <span className='text-slate-500 text-sm flex items-center gap-1.5'>â± {service.duration} hours</span>
+                <span className='text-slate-500 text-sm flex items-center gap-1.5'>Ã¢ÂÂ± {service.duration} hours</span>
               </div>
               <p className='text-slate-600 leading-relaxed mb-7 text-lg'>{service.description}</p>
               <h3 className='font-bold text-slate-900 mb-4 text-sm uppercase tracking-widest text-slate-400'>What is Included</h3>
@@ -62,10 +62,10 @@ export default function ServiceDetail() {
                 ))}
               </div>
               <div className='flex flex-col sm:flex-row gap-3 mb-4'>
-                <Link to={`/booking?service=${service.id}`} className='btn-primary btn-lg flex-1 justify-center'>Book Now â€” ${service.price}</Link>
+                <Link to={`/booking?service=${service.id}`} className='btn-primary btn-lg flex-1 justify-center'>Book Now Ã¢â‚¬â€ ${service.price}</Link>
                 <a href='https://wa.me/15550001234' target='_blank' rel='noopener noreferrer' className='inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#20b858] transition-colors'>WhatsApp</a>
               </div>
-              <p className='text-xs text-slate-400 text-center'>Free cancellation 24h before Â· No hidden fees Â· Satisfaction guaranteed</p>
+              <p className='text-xs text-slate-400 text-center'>Free cancellation 24h before Ã‚Â· No hidden fees Ã‚Â· Satisfaction guaranteed</p>
             </div>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16'>
@@ -83,7 +83,7 @@ export default function ServiceDetail() {
             <div className='bg-primary-50 border border-brand-100 rounded-2xl p-7'>
               <h3 className='font-bold text-slate-900 mb-5 text-lg'>Why Choose CityMaids</h3>
               <div className='space-y-3'>
-                {[['âœ…', 'Verified & insured professionals'], ['â­', '4.9â˜… average customer rating'], ['ðŸ”„', '100% satisfaction guarantee'], ['â™»ï¸', 'Eco-friendly products only'], ['ðŸ“±', 'Easy online booking & management']].map(([icon, text]) => (
+                {[['Ã¢Å“â€¦', 'Verified & insured professionals'], ['Ã¢Â­Â', '4.9Ã¢Ëœâ€¦ average customer rating'], ['Ã°Å¸â€â€ž', '100% satisfaction guarantee'], ['Ã¢â„¢Â»Ã¯Â¸Â', 'Eco-friendly products only'], ['Ã°Å¸â€œÂ±', 'Easy online booking & management']].map(([icon, text]) => (
                   <div key={text} className='flex items-center gap-3'><span className='text-lg'>{icon}</span><span className='text-slate-700 text-sm font-medium'>{text}</span></div>
                 ))}
               </div>

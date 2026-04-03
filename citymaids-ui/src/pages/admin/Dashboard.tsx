@@ -1,4 +1,4 @@
-﻿import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import AdminLayout from '../../components/layout/AdminLayout'
 import { StatusBadge } from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
@@ -150,10 +150,10 @@ export default function AdminDashboard() {
               <h2 className="font-bold text-slate-900 mb-4">Overview</h2>
               <div className="space-y-3">
                 {[
-                  { label: 'Total Customers', value: customers.length, icon: 'ðŸ‘¥', color: 'text-blue-600' },
-                  { label: 'Active Staff', value: staffMembers.filter(s => s.status === 'active').length, icon: 'âœ…', color: 'text-primary-600' },
-                  { label: 'Pending Reviews', value: reviews.filter(r => r.status === 'pending').length, icon: 'â­', color: 'text-yellow-600' },
-                  { label: 'New Leads', value: leads.filter(l => l.status === 'new').length, icon: 'ðŸ“§', color: 'text-purple-600' },
+                  { label: 'Total Customers', value: customers.length, icon: 'Ã°Å¸â€˜Â¥', color: 'text-blue-600' },
+                  { label: 'Active Staff', value: staffMembers.filter(s => s.status === 'active').length, icon: 'Ã¢Å“â€¦', color: 'text-primary-600' },
+                  { label: 'Pending Reviews', value: reviews.filter(r => r.status === 'pending').length, icon: 'Ã¢Â­Â', color: 'text-yellow-600' },
+                  { label: 'New Leads', value: leads.filter(l => l.status === 'new').length, icon: 'Ã°Å¸â€œÂ§', color: 'text-purple-600' },
                 ].map(item => (
                   <div key={item.label} className="flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
@@ -198,11 +198,11 @@ export default function AdminDashboard() {
             </div>
             <div className="p-5 space-y-4">
               {[
-                { text: 'New booking from Sarah Johnson', time: '5 min ago', icon: 'ðŸ“‹', color: 'bg-blue-100 text-blue-600' },
-                { text: 'Carlos Rivera completed a job', time: '23 min ago', icon: 'âœ…', color: 'bg-primary-100 text-primary-600' },
-                { text: 'New lead: Patricia Moore', time: '1 hour ago', icon: 'ðŸ“§', color: 'bg-purple-100 text-purple-600' },
-                { text: 'Review submitted by Emily Chen', time: '2 hours ago', icon: 'â­', color: 'bg-yellow-100 text-yellow-600' },
-                { text: 'Service updated: Deep Cleaning', time: '3 hours ago', icon: 'ðŸ§¹', color: 'bg-slate-100 text-slate-600' },
+                { text: 'New booking from Sarah Johnson', time: '5 min ago', icon: 'Ã°Å¸â€œâ€¹', color: 'bg-blue-100 text-blue-600' },
+                { text: 'Carlos Rivera completed a job', time: '23 min ago', icon: 'Ã¢Å“â€¦', color: 'bg-primary-100 text-primary-600' },
+                { text: 'New lead: Patricia Moore', time: '1 hour ago', icon: 'Ã°Å¸â€œÂ§', color: 'bg-purple-100 text-purple-600' },
+                { text: 'Review submitted by Emily Chen', time: '2 hours ago', icon: 'Ã¢Â­Â', color: 'bg-yellow-100 text-yellow-600' },
+                { text: 'Service updated: Deep Cleaning', time: '3 hours ago', icon: 'Ã°Å¸Â§Â¹', color: 'bg-slate-100 text-slate-600' },
               ].map((a, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className={`w-8 h-8 rounded-lg ${a.color} flex items-center justify-center flex-shrink-0`}>

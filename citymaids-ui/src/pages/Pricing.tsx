@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 
@@ -11,7 +11,7 @@ const plans = [
 const faqs = [
   { q: 'Can I cancel or reschedule?', a: 'Yes, free cancellation up to 24 hours before your appointment. Reschedule anytime through your account.' },
   { q: 'Are supplies included?', a: 'Yes, our cleaners bring all necessary supplies and equipment.' },
-  { q: 'Is there a contract?', a: 'No contracts. Book as needed or set up recurring cleanings â€” cancel anytime.' },
+  { q: 'Is there a contract?', a: 'No contracts. Book as needed or set up recurring cleanings Ã¢â‚¬â€ cancel anytime.' },
   { q: 'What if I am not satisfied?', a: 'We offer a 100% satisfaction guarantee. Contact us within 24 hours and we will re-clean for free.' },
 ]
 
