@@ -4,21 +4,27 @@ import BeforeAfterSlider from '../ui/BeforeAfterSlider'
 
 const pairs = [
   {
-    label: 'Kitchen Reset',
+    label: 'Kitchen Deep Clean',
     sub: 'Grease and grime completely eradicated',
-    before: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80',
-    after: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80',
+    before: 'https://images.unsplash.com/photo-1556911223-1049618c6454?w=1200&q=80',
+    after: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200&q=80',
   },
   {
-    label: 'Bathroom Polish',
+    label: 'Bathroom Scrub',
     sub: 'Stubborn grout and limescale gone',
-    before: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80',
+    before: 'https://images.unsplash.com/photo-1584622781564-1d987f7333c1?w=1200&q=80',
     after: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1200&q=80',
   },
   {
-    label: 'Home Maintenance',
-    sub: 'Dust and allergen-free living zones',
-    before: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
+    label: 'Office Cleaning',
+    sub: 'Dust-free productivity zones',
+    before: 'https://images.unsplash.com/photo-1517502884422-41eaead166d4?w=1200&q=80',
+    after: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80',
+  },
+  {
+    label: 'Living Room Reset',
+    sub: 'Allergen-free carpets and upholstery',
+    before: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80',
     after: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80',
   },
 ]
