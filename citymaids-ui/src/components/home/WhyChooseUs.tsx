@@ -5,37 +5,37 @@ const usps = [
   {
     title: 'Verified Staff',
     desc: 'Every cleaner is background-checked, identity-verified, and insured before joining our platform.',
-    icon: '🛡️',
+    icon: '\uD83D\uDEE1\uFE0F',
     color: 'bg-blue-50 text-blue-600',
   },
   {
     title: 'Safe Chemicals',
     desc: 'We use eco-friendly, non-toxic products that are safe for children, pets, and the environment.',
-    icon: '♻️',
+    icon: '\u267B\uFE0F',
     color: 'bg-teal-50 text-teal-600',
   },
   {
     title: 'On-Time Service',
     desc: 'We respect your schedule. Our cleaners arrive within the agreed time window, every single visit.',
-    icon: '⏰',
+    icon: '\u23F0',
     color: 'bg-primary-50 text-primary-600',
   },
   {
     title: 'Affordable Pricing',
     desc: 'No hidden fees, no surprises. You see the full price before you book — and that\'s exactly what you pay.',
-    icon: '💰',
+    icon: '\uD83D\uDCB0',
     color: 'bg-amber-50 text-amber-600',
   },
   {
     title: 'Satisfaction Guaranteed',
     desc: 'Not satisfied? Contact us within 24 hours and we\'ll send a team back to re-clean at no extra charge.',
-    icon: '✅',
+    icon: '\u2705',
     color: 'bg-green-50 text-green-600',
   },
   {
     title: 'Easy Online Booking',
     desc: 'Book, reschedule, or cancel in minutes from any device. No phone calls, no waiting.',
-    icon: '📱',
+    icon: '\uD83D\uDCF1',
     color: 'bg-violet-50 text-violet-600',
   },
 ]

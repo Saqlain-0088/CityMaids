@@ -4,37 +4,37 @@ import { useInView } from '../../hooks/useInView'
 
 const services = [
   {
-    id: 1, name: 'Home Cleaning', slug: 'standard-cleaning', price: 79, icon: '🏠',
+    id: 1, name: 'Home Cleaning', slug: 'standard-cleaning', price: 79, icon: '\uD83C\uDFE0',
     color: 'bg-blue-50 text-blue-600 border-blue-100',
     includes: ['Vacuuming all floors', 'Bathroom sanitizing', 'Kitchen wipe-down', 'Dusting surfaces'],
     badge: null,
   },
   {
-    id: 2, name: 'Deep Cleaning', slug: 'deep-cleaning', price: 149, icon: '✨',
+    id: 2, name: 'Deep Cleaning', slug: 'deep-cleaning', price: 149, icon: '\u2728',
     color: 'bg-primary-50 text-primary-600 border-primary-100',
     includes: ['Everything in Home Clean', 'Inside oven & fridge', 'Baseboards & sills', 'Cabinet interiors'],
     badge: 'Most Popular',
   },
   {
-    id: 3, name: 'Move In / Move Out', slug: 'move-in-out-cleaning', price: 199, icon: '📦',
+    id: 3, name: 'Move In / Move Out', slug: 'move-in-out-cleaning', price: 199, icon: '\uD83D\uDCE6',
     color: 'bg-teal-50 text-teal-600 border-teal-100',
     includes: ['Full property deep clean', 'Inside all appliances', 'Window cleaning', 'Final walkthrough'],
     badge: null,
   },
   {
-    id: 4, name: 'Office Cleaning', slug: 'office-cleaning', price: 129, icon: '🏢',
+    id: 4, name: 'Office Cleaning', slug: 'office-cleaning', price: 129, icon: '\uD83C\uDFE2',
     color: 'bg-violet-50 text-violet-600 border-violet-100',
     includes: ['Desk & workstation clean', 'Restroom sanitizing', 'Break room cleaning', 'Floor care'],
     badge: null,
   },
   {
-    id: 5, name: 'Carpet Cleaning', slug: 'carpet-cleaning', price: 99, icon: '🛋️',
+    id: 5, name: 'Carpet Cleaning', slug: 'carpet-cleaning', price: 99, icon: '\uD83D\uDECB\uFE0F',
     color: 'bg-amber-50 text-amber-600 border-amber-100',
     includes: ['Hot steam extraction', 'Pre-treatment stains', 'Deodorizing treatment', 'Pet hair removal'],
     badge: null,
   },
   {
-    id: 6, name: 'Post-Construction', slug: 'post-construction-cleaning', price: 249, icon: '🔨',
+    id: 6, name: 'Post-Construction', slug: 'post-construction-cleaning', price: 249, icon: '\uD83D\uDD28',
     color: 'bg-rose-50 text-rose-600 border-rose-100',
     includes: ['Fine dust removal', 'Paint splatter removal', 'Window & glass clean', 'Floor restoration'],
     badge: null,
