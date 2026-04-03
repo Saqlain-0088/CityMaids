@@ -2,21 +2,26 @@ import { useState, useEffect } from 'react'
 
 export default function LeadPopup() {
   const [show, setShow] = useState(false)
-  const [dismissed, setDismissed] = useState(false)
   const [phone, setPhone] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
   useEffect(() => {
-    if (dismissed) return
+    const isDismissed = sessionStorage.getItem('leadPopupDismissed')
+    if (isDismissed) return
+
     const t = setTimeout(() => setShow(true), 8000)
     return () => clearTimeout(t)
-  }, [dismissed])
+  }, [])
 
-  const dismiss = () => { setShow(false); setDismissed(true) }
+  const dismiss = () => { 
+    setShow(false)
+    sessionStorage.setItem('leadPopupDismissed', 'true')
+  }
 
   const submit = () => {
     if (!phone.trim()) return
     setSubmitted(true)
+    sessionStorage.setItem('leadPopupDismissed', 'true')
     setTimeout(dismiss, 2000)
   }
 
