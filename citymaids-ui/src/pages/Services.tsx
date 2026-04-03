@@ -136,20 +136,18 @@ export default function Services() {
     <MainLayout>
 
       {/* â”€â”€ Page Header â”€â”€ */}
-      <div className="bg-white border-b border-slate-100">
-        <div className="container-xl py-14">
+      <div className="bg-gradient-to-br from-slate-900 to-primary-950 py-16"><div className="container-xl">
           <div className="max-w-2xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-6 h-px bg-primary-500" />
-              <span className="text-primary-600 font-semibold text-xs uppercase tracking-widest">What We Offer</span>
+              <span className="text-primary-400 font-semibold text-xs uppercase tracking-widest">What We Offer</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-4"
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-4"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
               Professional Cleaning<br />
-              <span className="bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent">For Every Situation</span>
+              <span className="bg-gradient-to-r from-primary-400 to-teal-400 bg-clip-text text-transparent">For Every Situation</span>
             </h1>
-            <p className="text-slate-500 text-lg leading-relaxed">
-              Six specialist services delivered by vetted, insured professionals. Transparent pricing, guaranteed results.
+            <p className="text-slate-300 text-lg leading-relaxed">Six specialist services delivered by vetted, insured professionals. Transparent pricing, guaranteed results.
             </p>
           </div>
         </div>
@@ -330,4 +328,6 @@ export default function Services() {
     </MainLayout>
   )
 }
+
+
 
