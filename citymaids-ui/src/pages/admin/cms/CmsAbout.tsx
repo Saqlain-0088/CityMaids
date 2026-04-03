@@ -1,17 +1,17 @@
-import AdminLayout from '../../../components/layout/AdminLayout'
+﻿import AdminLayout from '../../../components/layout/AdminLayout'
 
 export default function CMSAboutPage() {
   return (
     <AdminLayout>
       <div className='flex flex-col items-center justify-center min-h-[60vh] text-center'>
         <div className='w-16 h-16 rounded-2xl bg-primary-50 flex items-center justify-center mb-4'>
-          <span className='text-3xl'>Ã¢â€žÂ¹Ã¯Â¸Â</span>
+          <span className='text-3xl'>â„¹ï¸</span>
         </div>
         <h2 className='text-2xl font-extrabold text-slate-900 mb-2'>About Page</h2>
         <p className='text-slate-500 text-sm max-w-sm'>Edit company story, team, and mission content.</p>
         <span className='mt-4 inline-flex items-center gap-1.5 text-xs font-semibold bg-amber-100 text-amber-700 px-3 py-1.5 rounded-full'>
           <svg className='w-3.5 h-3.5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' /></svg>
-          Coming soon Ã¢â‚¬â€ editor will be built here
+          Coming soon â€” editor will be built here
         </span>
       </div>
     </AdminLayout>

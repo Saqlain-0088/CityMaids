@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import StaffLayout from '../../components/layout/StaffLayout'
 import { StatusBadge } from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
@@ -44,9 +44,9 @@ export default function StaffDashboard() {
                     <StatusBadge status={job.status} />
                   </div>
                   <div className="space-y-1.5 text-sm text-slate-500 mb-4">
-                    <p>Ã°Å¸â€œâ€¦ {job.scheduledAt}</p>
-                    <p>Ã°Å¸â€œÂ {job.address}</p>
-                    <p>Ã°Å¸â€œÅ¾ {job.customerPhone}</p>
+                    <p>ðŸ“… {job.scheduledAt}</p>
+                    <p>ðŸ“ {job.address}</p>
+                    <p>ðŸ“ž {job.customerPhone}</p>
                   </div>
                   <div className="flex gap-2">
                     <Button size="sm" variant="ghost" className="border border-slate-200" onClick={() => setSelected(job)}>Details</Button>
@@ -65,7 +65,7 @@ export default function StaffDashboard() {
               {completed.map(job => (
                 <div key={job.id} className="bg-white rounded-2xl border border-slate-100 shadow-card p-4 opacity-70">
                   <div className="flex items-center justify-between">
-                    <div><p className="font-medium text-slate-900 text-sm">{job.serviceName}</p><p className="text-xs text-slate-400">{job.customerName} Ã¢â‚¬Â¢ {job.scheduledAt}</p></div>
+                    <div><p className="font-medium text-slate-900 text-sm">{job.serviceName}</p><p className="text-xs text-slate-400">{job.customerName} â€¢ {job.scheduledAt}</p></div>
                     <StatusBadge status={job.status} />
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export default function StaffDashboard() {
 
         {jobs.length === 0 && (
           <div className="text-center py-16 text-slate-400">
-            <p className="text-4xl mb-3">Ã°Å¸â€œâ€¹</p>
+            <p className="text-4xl mb-3">ðŸ“‹</p>
             <p className="font-medium">No jobs assigned yet</p>
             <p className="text-sm">Check back later for new assignments.</p>
           </div>

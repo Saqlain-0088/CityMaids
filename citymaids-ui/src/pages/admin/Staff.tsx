@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import AdminLayout from '../../components/layout/AdminLayout'
 import { StatusBadge } from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
@@ -56,7 +56,7 @@ export default function AdminStaff() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <h1 className="text-2xl font-extrabold text-slate-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Staff Management</h1>
-            <p className="text-slate-500 text-sm mt-0.5">{activeCount} active Ã‚Â· {list.length - activeCount} inactive</p>
+            <p className="text-slate-500 text-sm mt-0.5">{activeCount} active Â· {list.length - activeCount} inactive</p>
           </div>
           <Button onClick={() => setModal(true)}>
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" /></svg>
@@ -70,7 +70,7 @@ export default function AdminStaff() {
             { label: 'Total Staff', value: list.length, color: 'from-blue-500 to-blue-600' },
             { label: 'Active', value: activeCount, color: 'from-brand-500 to-brand-600' },
             { label: 'Total Jobs', value: list.reduce((s, m) => s + m.jobsCompleted, 0), color: 'from-purple-500 to-purple-600' },
-            { label: 'Avg Rating', value: (list.filter(s => s.rating > 0).reduce((s, m) => s + m.rating, 0) / list.filter(s => s.rating > 0).length).toFixed(1) + 'Ã¢Ëœâ€¦', color: 'from-yellow-500 to-orange-500' },
+            { label: 'Avg Rating', value: (list.filter(s => s.rating > 0).reduce((s, m) => s + m.rating, 0) / list.filter(s => s.rating > 0).length).toFixed(1) + 'â˜…', color: 'from-yellow-500 to-orange-500' },
           ].map(s => (
             <div key={s.label} className="bg-white rounded-2xl border border-slate-100 shadow-soft p-4">
               <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${s.color} flex items-center justify-center mb-3`}>
@@ -121,7 +121,7 @@ export default function AdminStaff() {
                   <p className="text-xs text-slate-400">Jobs</p>
                 </div>
                 <div className="bg-slate-50 rounded-xl p-2.5 text-center">
-                  <p className="text-lg font-extrabold text-slate-900">{s.rating > 0 ? s.rating : 'Ã¢â‚¬â€'}</p>
+                  <p className="text-lg font-extrabold text-slate-900">{s.rating > 0 ? s.rating : 'â€”'}</p>
                   <p className="text-xs text-slate-400">Rating</p>
                 </div>
                 <div className="bg-slate-50 rounded-xl p-2.5 text-center">
