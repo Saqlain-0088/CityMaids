@@ -1,4 +1,4 @@
-\uFEFFimport { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import AdminLayout from '../../components/layout/AdminLayout'
 import { StatusBadge } from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'

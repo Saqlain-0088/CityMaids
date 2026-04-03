@@ -1,4 +1,4 @@
-\uFEFFimport { useParams, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 import { services } from '../data/services'
 
