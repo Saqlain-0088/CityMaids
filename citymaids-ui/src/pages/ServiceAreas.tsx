@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 
 const areas = [
-  { name: 'Manhattan', icon: '🏙️', neighborhoods: ['Upper East Side', 'Upper West Side', 'Midtown', 'Chelsea', 'SoHo', 'Tribeca', 'Financial District', 'Harlem'] },
-  { name: 'Brooklyn', icon: '🌉', neighborhoods: ['Park Slope', 'Williamsburg', 'DUMBO', 'Brooklyn Heights', 'Bushwick', 'Crown Heights', 'Bay Ridge'] },
-  { name: 'Queens', icon: '✈️', neighborhoods: ['Astoria', 'Long Island City', 'Flushing', 'Forest Hills', 'Jackson Heights', 'Bayside'] },
-  { name: 'Bronx', icon: '🌳', neighborhoods: ['Riverdale', 'Fordham', 'Pelham Bay', 'Mott Haven', 'Throgs Neck'] },
-  { name: 'Staten Island', icon: '⛴️', neighborhoods: ['St. George', 'Stapleton', 'New Dorp', 'Tottenville', 'Great Kills'] },
-  { name: 'New Jersey', icon: '🌆', neighborhoods: ['Hoboken', 'Jersey City', 'Weehawken', 'Union City', 'Bayonne'] },
+  { name: 'Manhattan', icon: 'ðŸ™ï¸', neighborhoods: ['Upper East Side', 'Upper West Side', 'Midtown', 'Chelsea', 'SoHo', 'Tribeca', 'Financial District', 'Harlem'] },
+  { name: 'Brooklyn', icon: 'ðŸŒ‰', neighborhoods: ['Park Slope', 'Williamsburg', 'DUMBO', 'Brooklyn Heights', 'Bushwick', 'Crown Heights', 'Bay Ridge'] },
+  { name: 'Queens', icon: 'âœˆï¸', neighborhoods: ['Astoria', 'Long Island City', 'Flushing', 'Forest Hills', 'Jackson Heights', 'Bayside'] },
+  { name: 'Bronx', icon: 'ðŸŒ³', neighborhoods: ['Riverdale', 'Fordham', 'Pelham Bay', 'Mott Haven', 'Throgs Neck'] },
+  { name: 'Staten Island', icon: 'â›´ï¸', neighborhoods: ['St. George', 'Stapleton', 'New Dorp', 'Tottenville', 'Great Kills'] },
+  { name: 'New Jersey', icon: 'ðŸŒ†', neighborhoods: ['Hoboken', 'Jersey City', 'Weehawken', 'Union City', 'Bayonne'] },
 ]
 
 export default function ServiceAreas() {
@@ -15,7 +15,7 @@ export default function ServiceAreas() {
     <MainLayout>
       <div className='bg-gradient-to-br from-slate-900 to-slate-800 py-20'>
         <div className='container-xl text-center'>
-          <span className='inline-block text-brand-400 font-semibold text-sm uppercase tracking-widest mb-3'>Coverage</span>
+          <span className='inline-block text-primary-400 font-semibold text-sm uppercase tracking-widest mb-3'>Coverage</span>
           <h1 className='text-4xl sm:text-5xl font-extrabold text-white mb-4' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Service Areas</h1>
           <p className='text-slate-300 text-lg max-w-xl mx-auto'>Professional cleaning across New York City and surrounding areas.</p>
           <div className='flex flex-wrap items-center justify-center gap-4 mt-8'>
@@ -34,7 +34,7 @@ export default function ServiceAreas() {
             {areas.map(area => (
               <div key={area.name} className='bg-white border border-slate-200 rounded-2xl p-6 hover:shadow-medium hover:-translate-y-1 transition-all duration-300'>
                 <div className='flex items-center gap-3 mb-4'>
-                  <div className='w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-2xl'>{area.icon}</div>
+                  <div className='w-12 h-12 rounded-xl bg-primary-50 flex items-center justify-center text-2xl'>{area.icon}</div>
                   <h3 className='font-bold text-slate-900 text-lg'>{area.name}</h3>
                 </div>
                 <div className='flex flex-wrap gap-2'>
@@ -49,7 +49,7 @@ export default function ServiceAreas() {
             <h3 className='text-2xl sm:text-3xl font-extrabold text-white mb-3' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Don't see your area?</h3>
             <p className='text-brand-100 mb-6 max-w-md mx-auto'>We are expanding fast! Contact us to check if we serve your location.</p>
             <div className='flex flex-col sm:flex-row gap-3 justify-center'>
-              <Link to='/contact' className='inline-flex items-center justify-center gap-2 bg-white text-brand-700 font-bold px-6 py-3 rounded-xl hover:bg-brand-50 transition-colors'>Contact Us</Link>
+              <Link to='/contact' className='inline-flex items-center justify-center gap-2 bg-white text-primary-700 font-bold px-6 py-3 rounded-xl hover:bg-primary-50 transition-colors'>Contact Us</Link>
               <a href='https://wa.me/15550001234' target='_blank' rel='noopener noreferrer' className='inline-flex items-center justify-center gap-2 bg-white/20 text-white font-semibold px-6 py-3 rounded-xl hover:bg-white/30 transition-colors'>Chat on WhatsApp</a>
             </div>
           </div>

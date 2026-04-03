@@ -59,7 +59,7 @@ export default function AdminServices() {
                 <div className="absolute bottom-3 left-3 flex items-center gap-2">
                   <span className="text-2xl">{s.icon}</span>
                   {s.isPopular && (
-                    <span className="bg-brand-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">Popular</span>
+                    <span className="bg-primary-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">Popular</span>
                   )}
                 </div>
                 <div className="absolute top-3 right-3">
@@ -69,7 +69,7 @@ export default function AdminServices() {
               <div className="p-4">
                 <div className="flex items-start justify-between mb-2">
                   <h3 className="font-bold text-slate-900">{s.name}</h3>
-                  <p className="text-xl font-extrabold text-brand-600">${s.price}</p>
+                  <p className="text-xl font-extrabold text-primary-600">${s.price}</p>
                 </div>
                 <p className="text-xs text-slate-500 mb-3 line-clamp-2">{s.shortDescription}</p>
                 <div className="flex items-center gap-3 text-xs text-slate-400 mb-4">
@@ -137,3 +137,4 @@ export default function AdminServices() {
     </AdminLayout>
   )
 }
+

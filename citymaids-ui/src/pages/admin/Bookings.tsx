@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import AdminLayout from '../../components/layout/AdminLayout'
 import { StatusBadge } from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
@@ -74,7 +74,7 @@ export default function AdminBookings() {
                 placeholder="Search by customer or service..."
                 value={search}
                 onChange={e => { setSearch(e.target.value); setPage(1) }}
-                className="w-full pl-9 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 focus:bg-white transition-all placeholder:text-slate-400"
+                className="w-full pl-9 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white transition-all placeholder:text-slate-400"
               />
             </div>
             <div className="w-full sm:w-44">
@@ -101,7 +101,7 @@ export default function AdminBookings() {
             <button
               key={f.value}
               onClick={() => { setStatusFilter(f.value); setPage(1) }}
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${statusFilter === f.value ? 'bg-brand-600 text-white shadow-brand' : 'bg-white border border-slate-200 text-slate-600 hover:border-brand-300 hover:text-brand-700'}`}
+              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${statusFilter === f.value ? 'bg-primary-600 text-white shadow-brand' : 'bg-white border border-slate-200 text-slate-600 hover:border-brand-300 hover:text-primary-700'}`}
             >
               {f.label}
               <span className={`px-1.5 py-0.5 rounded-full text-xs ${statusFilter === f.value ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-500'}`}>{f.count}</span>
@@ -137,15 +137,15 @@ export default function AdminBookings() {
                     <td className="px-4 py-3.5">
                       {b.staffName
                         ? <div className="flex items-center gap-2">
-                            <div className="w-6 h-6 rounded-full bg-brand-100 flex items-center justify-center">
-                              <span className="text-brand-700 font-bold text-xs">{b.staffName.split(' ').map(n => n[0]).join('')}</span>
+                            <div className="w-6 h-6 rounded-full bg-primary-100 flex items-center justify-center">
+                              <span className="text-primary-700 font-bold text-xs">{b.staffName.split(' ').map(n => n[0]).join('')}</span>
                             </div>
                             <span className="text-slate-700 text-xs">{b.staffName}</span>
                           </div>
                         : <span className="text-slate-300 text-xs">Unassigned</span>
                       }
                     </td>
-                    <td className="px-4 py-3.5 font-bold text-brand-600">${b.price}</td>
+                    <td className="px-4 py-3.5 font-bold text-primary-600">${b.price}</td>
                     <td className="px-4 py-3.5"><StatusBadge status={b.status} /></td>
                     <td className="px-4 py-3.5">
                       <div className="flex items-center gap-1.5">
@@ -155,7 +155,7 @@ export default function AdminBookings() {
                         )}
                         {nextStatus[b.status] && b.status !== 'confirmed' && (
                           <Button size="xs" onClick={() => updateStatus(b.id, nextStatus[b.status]!)}>
-                            → {nextStatus[b.status]?.replace('_', ' ')}
+                            â†’ {nextStatus[b.status]?.replace('_', ' ')}
                           </Button>
                         )}
                       </div>
@@ -169,7 +169,7 @@ export default function AdminBookings() {
           {/* Pagination */}
           <div className="flex items-center justify-between px-4 py-3.5 border-t border-slate-100 bg-slate-50">
             <p className="text-xs text-slate-500">
-              Showing {Math.min((page - 1) * PAGE_SIZE + 1, filtered.length)}–{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}
+              Showing {Math.min((page - 1) * PAGE_SIZE + 1, filtered.length)}â€“{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}
             </p>
             <div className="flex items-center gap-1">
               <button
@@ -183,7 +183,7 @@ export default function AdminBookings() {
                 <button
                   key={p}
                   onClick={() => setPage(p)}
-                  className={`w-8 h-8 rounded-lg text-xs font-semibold transition-colors ${p === page ? 'bg-brand-600 text-white' : 'text-slate-600 hover:bg-white hover:text-slate-900 border border-transparent hover:border-slate-200'}`}
+                  className={`w-8 h-8 rounded-lg text-xs font-semibold transition-colors ${p === page ? 'bg-primary-600 text-white' : 'text-slate-600 hover:bg-white hover:text-slate-900 border border-transparent hover:border-slate-200'}`}
                 >{p}</button>
               ))}
               <button
@@ -258,14 +258,14 @@ export default function AdminBookings() {
           <p className="text-sm text-slate-500">Select a staff member to assign to this booking.</p>
           <div className="space-y-2">
             {staffMembers.filter(s => s.status === 'active').map(s => (
-              <label key={s.id} className={`flex items-center gap-3 p-3 rounded-xl border cursor-pointer transition-all ${staffId === String(s.id) ? 'border-brand-400 bg-brand-50' : 'border-slate-200 hover:border-slate-300'}`}>
+              <label key={s.id} className={`flex items-center gap-3 p-3 rounded-xl border cursor-pointer transition-all ${staffId === String(s.id) ? 'border-brand-400 bg-primary-50' : 'border-slate-200 hover:border-slate-300'}`}>
                 <input type="radio" name="staff" value={s.id} checked={staffId === String(s.id)} onChange={e => setStaffId(e.target.value)} className="accent-brand-600" />
-                <div className="w-9 h-9 rounded-full bg-brand-100 flex items-center justify-center">
-                  <span className="text-brand-700 font-bold text-xs">{s.avatar}</span>
+                <div className="w-9 h-9 rounded-full bg-primary-100 flex items-center justify-center">
+                  <span className="text-primary-700 font-bold text-xs">{s.avatar}</span>
                 </div>
                 <div className="flex-1">
                   <p className="font-semibold text-slate-900 text-sm">{s.name}</p>
-                  <p className="text-xs text-slate-400">{s.jobsCompleted} jobs · {s.rating}★</p>
+                  <p className="text-xs text-slate-400">{s.jobsCompleted} jobs Â· {s.rating}â˜…</p>
                 </div>
               </label>
             ))}
@@ -279,3 +279,4 @@ export default function AdminBookings() {
     </AdminLayout>
   )
 }
+

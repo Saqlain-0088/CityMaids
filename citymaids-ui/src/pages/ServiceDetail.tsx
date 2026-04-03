@@ -1,8 +1,8 @@
-import { useParams, Link } from 'react-router-dom'
+﻿import { useParams, Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 import { services } from '../data/services'
 
-const processSteps = ['We confirm your booking and send a reminder 24h before.', 'Our vetted cleaner arrives on time with all supplies.', 'We clean thoroughly following our quality checklist.', 'You inspect the results — we guarantee your satisfaction.']
+const processSteps = ['We confirm your booking and send a reminder 24h before.', 'Our vetted cleaner arrives on time with all supplies.', 'We clean thoroughly following our quality checklist.', 'You inspect the results â€” we guarantee your satisfaction.']
 
 export default function ServiceDetail() {
   const { slug } = useParams()
@@ -11,7 +11,7 @@ export default function ServiceDetail() {
   if (!service) return (
     <MainLayout>
       <div className='container-xl py-20 text-center'>
-        <p className='text-5xl mb-4'>🔍</p>
+        <p className='text-5xl mb-4'>ðŸ”</p>
         <h2 className='text-2xl font-bold text-slate-900 mb-2'>Service Not Found</h2>
         <Link to='/services' className='btn-primary mt-4 inline-flex'>Browse All Services</Link>
       </div>
@@ -21,9 +21,9 @@ export default function ServiceDetail() {
     <MainLayout>
       <div className='bg-slate-50 border-b border-slate-100 py-3'>
         <div className='container-xl flex items-center gap-2 text-sm text-slate-400'>
-          <Link to='/' className='hover:text-brand-600 transition-colors'>Home</Link>
+          <Link to='/' className='hover:text-primary-600 transition-colors'>Home</Link>
           <span>/</span>
-          <Link to='/services' className='hover:text-brand-600 transition-colors'>Services</Link>
+          <Link to='/services' className='hover:text-primary-600 transition-colors'>Services</Link>
           <span>/</span>
           <span className='text-slate-700 font-medium'>{service.name}</span>
         </div>
@@ -42,30 +42,30 @@ export default function ServiceDetail() {
               </div>
             </div>
             <div className='lg:pt-2'>
-              {service.isPopular && <span className='inline-flex items-center gap-1.5 bg-brand-100 text-brand-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4'>⭐ Most Popular</span>}
+              {service.isPopular && <span className='inline-flex items-center gap-1.5 bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1.5 rounded-full mb-4'>â­ Most Popular</span>}
               <h1 className='text-4xl font-extrabold text-slate-900 mb-3' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>{service.name}</h1>
               <div className='flex items-center gap-4 mb-5'>
-                <span className='text-4xl font-extrabold text-brand-600'>${service.price}</span>
+                <span className='text-4xl font-extrabold text-primary-600'>${service.price}</span>
                 <span className='text-slate-300'>|</span>
-                <span className='text-slate-500 text-sm flex items-center gap-1.5'>⏱ {service.duration} hours</span>
+                <span className='text-slate-500 text-sm flex items-center gap-1.5'>â± {service.duration} hours</span>
               </div>
               <p className='text-slate-600 leading-relaxed mb-7 text-lg'>{service.description}</p>
               <h3 className='font-bold text-slate-900 mb-4 text-sm uppercase tracking-widest text-slate-400'>What is Included</h3>
               <div className='grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-8'>
                 {service.features.map(f => (
                   <div key={f} className='flex items-center gap-3'>
-                    <div className='w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0'>
-                      <svg className='w-3 h-3 text-brand-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2.5} d='M5 13l4 4L19 7' /></svg>
+                    <div className='w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0'>
+                      <svg className='w-3 h-3 text-primary-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2.5} d='M5 13l4 4L19 7' /></svg>
                     </div>
                     <span className='text-sm text-slate-700'>{f}</span>
                   </div>
                 ))}
               </div>
               <div className='flex flex-col sm:flex-row gap-3 mb-4'>
-                <Link to={`/booking?service=${service.id}`} className='btn-primary btn-lg flex-1 justify-center'>Book Now — ${service.price}</Link>
+                <Link to={`/booking?service=${service.id}`} className='btn-primary btn-lg flex-1 justify-center'>Book Now â€” ${service.price}</Link>
                 <a href='https://wa.me/15550001234' target='_blank' rel='noopener noreferrer' className='inline-flex items-center justify-center gap-2 bg-[#25D366] text-white font-semibold px-6 py-3 rounded-xl hover:bg-[#20b858] transition-colors'>WhatsApp</a>
               </div>
-              <p className='text-xs text-slate-400 text-center'>Free cancellation 24h before · No hidden fees · Satisfaction guaranteed</p>
+              <p className='text-xs text-slate-400 text-center'>Free cancellation 24h before Â· No hidden fees Â· Satisfaction guaranteed</p>
             </div>
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16'>
@@ -74,16 +74,16 @@ export default function ServiceDetail() {
               <div className='space-y-4'>
                 {processSteps.map((step, i) => (
                   <div key={i} className='flex items-start gap-4'>
-                    <div className='w-8 h-8 rounded-full bg-brand-600 text-white flex items-center justify-center font-bold text-sm flex-shrink-0'>{i + 1}</div>
+                    <div className='w-8 h-8 rounded-full bg-primary-600 text-white flex items-center justify-center font-bold text-sm flex-shrink-0'>{i + 1}</div>
                     <p className='text-slate-600 text-sm leading-relaxed pt-1'>{step}</p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className='bg-brand-50 border border-brand-100 rounded-2xl p-7'>
+            <div className='bg-primary-50 border border-brand-100 rounded-2xl p-7'>
               <h3 className='font-bold text-slate-900 mb-5 text-lg'>Why Choose CityMaids</h3>
               <div className='space-y-3'>
-                {[['✅', 'Verified & insured professionals'], ['⭐', '4.9★ average customer rating'], ['🔄', '100% satisfaction guarantee'], ['♻️', 'Eco-friendly products only'], ['📱', 'Easy online booking & management']].map(([icon, text]) => (
+                {[['âœ…', 'Verified & insured professionals'], ['â­', '4.9â˜… average customer rating'], ['ðŸ”„', '100% satisfaction guarantee'], ['â™»ï¸', 'Eco-friendly products only'], ['ðŸ“±', 'Easy online booking & management']].map(([icon, text]) => (
                   <div key={text} className='flex items-center gap-3'><span className='text-lg'>{icon}</span><span className='text-slate-700 text-sm font-medium'>{text}</span></div>
                 ))}
               </div>
@@ -99,7 +99,7 @@ export default function ServiceDetail() {
                   </div>
                   <div className='p-4'>
                     <p className='font-bold text-slate-900'>{s.name}</p>
-                    <p className='text-brand-600 font-extrabold'>${s.price}</p>
+                    <p className='text-primary-600 font-extrabold'>${s.price}</p>
                   </div>
                 </Link>
               ))}

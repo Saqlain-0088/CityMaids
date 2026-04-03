@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import AdminLayout from '../../components/layout/AdminLayout'
 import Button from '../../components/ui/Button'
 import Modal from '../../components/ui/Modal'
@@ -58,7 +58,7 @@ export default function AdminCustomers() {
               placeholder="Search by name, email or phone..."
               value={search}
               onChange={e => { setSearch(e.target.value); setPage(1) }}
-              className="w-full pl-9 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 focus:bg-white transition-all placeholder:text-slate-400"
+              className="w-full pl-9 pr-4 py-2.5 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white transition-all placeholder:text-slate-400"
             />
           </div>
         </div>
@@ -97,12 +97,12 @@ export default function AdminCustomers() {
                     <td className="px-4 py-3.5">
                       <div className="flex items-center gap-2">
                         <div className="flex-1 bg-slate-100 rounded-full h-1.5 max-w-16">
-                          <div className="bg-brand-500 h-1.5 rounded-full" style={{ width: `${Math.min(100, (c.totalBookings / 15) * 100)}%` }} />
+                          <div className="bg-primary-500 h-1.5 rounded-full" style={{ width: `${Math.min(100, (c.totalBookings / 15) * 100)}%` }} />
                         </div>
                         <span className="font-semibold text-slate-900">{c.totalBookings}</span>
                       </div>
                     </td>
-                    <td className="px-4 py-3.5 font-bold text-brand-600">${c.totalSpent.toLocaleString()}</td>
+                    <td className="px-4 py-3.5 font-bold text-primary-600">${c.totalSpent.toLocaleString()}</td>
                     <td className="px-4 py-3.5 text-slate-600 whitespace-nowrap">{c.lastBooking}</td>
                     <td className="px-4 py-3.5">
                       <span className={`inline-flex items-center gap-1.5 text-xs font-semibold px-2.5 py-1 rounded-full ${c.status === 'active' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-500'}`}>
@@ -122,7 +122,7 @@ export default function AdminCustomers() {
           {/* Pagination */}
           <div className="flex items-center justify-between px-4 py-3.5 border-t border-slate-100 bg-slate-50">
             <p className="text-xs text-slate-500">
-              Showing {Math.min((page - 1) * PAGE_SIZE + 1, filtered.length)}–{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}
+              Showing {Math.min((page - 1) * PAGE_SIZE + 1, filtered.length)}â€“{Math.min(page * PAGE_SIZE, filtered.length)} of {filtered.length}
             </p>
             <div className="flex items-center gap-1">
               <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1}
@@ -131,7 +131,7 @@ export default function AdminCustomers() {
               </button>
               {Array.from({ length: totalPages }, (_, i) => i + 1).map(p => (
                 <button key={p} onClick={() => setPage(p)}
-                  className={`w-8 h-8 rounded-lg text-xs font-semibold transition-colors ${p === page ? 'bg-brand-600 text-white' : 'text-slate-600 hover:bg-white border border-transparent hover:border-slate-200'}`}>{p}</button>
+                  className={`w-8 h-8 rounded-lg text-xs font-semibold transition-colors ${p === page ? 'bg-primary-600 text-white' : 'text-slate-600 hover:bg-white border border-transparent hover:border-slate-200'}`}>{p}</button>
               ))}
               <button onClick={() => setPage(p => Math.min(totalPages, p + 1))} disabled={page === totalPages}
                 className="p-1.5 rounded-lg text-slate-500 hover:bg-white disabled:opacity-40 disabled:cursor-not-allowed transition-colors border border-transparent hover:border-slate-200">
@@ -185,3 +185,4 @@ export default function AdminCustomers() {
     </AdminLayout>
   )
 }
+

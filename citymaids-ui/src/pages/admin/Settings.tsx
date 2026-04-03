@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import AdminLayout from '../../components/layout/AdminLayout'
 import Button from '../../components/ui/Button'
 import { Input, Textarea } from '../../components/ui/Input'
@@ -61,9 +61,9 @@ export default function AdminSettings() {
               <div key={day} className="flex items-center gap-4">
                 <div className="w-24 text-sm font-medium text-slate-700">{day}</div>
                 <div className="flex items-center gap-2 flex-1">
-                  <input type="time" defaultValue="09:00" className="px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500" />
+                  <input type="time" defaultValue="09:00" className="px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" />
                   <span className="text-slate-400">to</span>
-                  <input type="time" defaultValue="18:00" className="px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500" />
+                  <input type="time" defaultValue="18:00" className="px-3 py-2 text-sm border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500" />
                 </div>
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input type="checkbox" defaultChecked={day !== 'Sunday'} className="accent-brand-600" />
@@ -105,3 +105,4 @@ export default function AdminSettings() {
     </AdminLayout>
   )
 }
+

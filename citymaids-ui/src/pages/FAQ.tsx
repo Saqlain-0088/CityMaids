@@ -49,13 +49,13 @@ export default function FAQ() {
     <MainLayout>
       <div className="bg-gradient-to-br from-slate-900 to-slate-800 py-20">
         <div className="container-xl text-center">
-          <span className="inline-block text-brand-400 font-semibold text-sm uppercase tracking-widest mb-3">Help Center</span>
+          <span className="inline-block text-primary-400 font-semibold text-sm uppercase tracking-widest mb-3">Help Center</span>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Frequently Asked Questions</h1>
           <p className="text-slate-300 text-lg max-w-xl mx-auto mb-8">Everything you need to know about CityMaids.</p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {categories.map((cat, i) => (
               <button key={cat.title} onClick={() => setActiveCategory(i)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all ${activeCategory === i ? 'bg-brand-500 text-white' : 'bg-white/10 text-white hover:bg-white/20'}`}>
+                className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all ${activeCategory === i ? 'bg-primary-500 text-white' : 'bg-white/10 text-white hover:bg-white/20'}`}>
                 <span>{cat.icon}</span>{cat.title}
               </button>
             ))}
@@ -70,7 +70,7 @@ export default function FAQ() {
               <AccordionItem key={i} q={faq.q} a={faq.a} />
             ))}
           </div>
-          <div className="mt-12 bg-brand-50 border border-brand-100 rounded-3xl p-8 text-center">
+          <div className="mt-12 bg-primary-50 border border-brand-100 rounded-3xl p-8 text-center">
             <p className="text-2xl font-extrabold text-slate-900 mb-2" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Still have questions?</p>
             <p className="text-slate-500 mb-6">Our team is available 7 days a week to help you.</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -83,3 +83,4 @@ export default function FAQ() {
     </MainLayout>
   )
 }
+

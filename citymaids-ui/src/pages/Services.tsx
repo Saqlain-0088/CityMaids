@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 
@@ -50,7 +50,7 @@ const services = [
     price: 199,
     duration: '5 hours',
     image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=1000&q=90',
-    summary: 'Specialized cleaning for property transitions — ensuring a spotless handover and full deposit return.',
+    summary: 'Specialized cleaning for property transitions â€” ensuring a spotless handover and full deposit return.',
     desc: 'Moving is stressful enough. Our move-in/move-out service handles the entire property from top to bottom, leaving it in pristine condition for the next occupant or for your final inspection.',
     includes: [
       'Full deep clean of entire property',
@@ -110,7 +110,7 @@ const services = [
     price: 249,
     duration: '6 hours',
     image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1000&q=90',
-    summary: 'Eliminate construction dust, debris, and residue — restoring your space to move-in condition.',
+    summary: 'Eliminate construction dust, debris, and residue â€” restoring your space to move-in condition.',
     desc: 'After renovation or new construction, your space needs specialist attention. We remove fine construction dust, debris, paint residue, and adhesive marks, leaving every surface clean and ready for occupancy.',
     includes: [
       'Fine dust & debris removal',
@@ -129,13 +129,13 @@ export default function Services() {
   const [active, setActive] = useState(0)
   const s = services[active]
 
-  // Just swap content — no scroll. The sticky tab bar stays visible.
+  // Just swap content â€” no scroll. The sticky tab bar stays visible.
   const selectService = (i: number) => setActive(i)
 
   return (
     <MainLayout>
 
-      {/* ── Page Header ── */}
+      {/* â”€â”€ Page Header â”€â”€ */}
       <div className="bg-white border-b border-slate-100">
         <div className="container-xl py-14">
           <div className="max-w-2xl">
@@ -155,7 +155,7 @@ export default function Services() {
         </div>
       </div>
 
-      {/* ── Tab bar — STICKY so you can switch without scrolling back up ── */}
+      {/* â”€â”€ Tab bar â€” STICKY so you can switch without scrolling back up â”€â”€ */}
       <div className="sticky top-16 z-20 bg-white border-b border-slate-200 shadow-sm">
         <div className="container-xl">
           <div className="flex gap-0 overflow-x-auto scrollbar-hide">
@@ -181,7 +181,7 @@ export default function Services() {
         </div>
       </div>
 
-      {/* ── Service Detail Panel ── */}
+      {/* â”€â”€ Service Detail Panel â”€â”€ */}
       <section className="bg-white py-16">
         <div className="container-xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -198,66 +198,66 @@ export default function Services() {
               </div>
 
               {/* Price card */}
-              <div className="absolute -bottom-5 -right-5 bg-white rounded-2xl shadow-xl border border-dark-100 p-5 hidden md:block">
-                <p className="text-xs text-dark-400 font-medium mb-1">Starting from</p>
-                <p className="text-4xl font-extrabold text-dark-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+              <div className="absolute -bottom-5 -right-5 bg-white rounded-2xl shadow-xl border border-slate-100 p-5 hidden md:block">
+                <p className="text-xs text-slate-400 font-medium mb-1">Starting from</p>
+                <p className="text-4xl font-extrabold text-slate-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                   ${s.price}
                 </p>
-                <p className="text-sm text-dark-400 mt-0.5">per visit · {s.duration}</p>
+                <p className="text-sm text-slate-400 mt-0.5">per visit Â· {s.duration}</p>
               </div>
             </div>
 
             {/* Right: Content */}
             <div className="lg:pt-2">
               {s.badge && (
-                <span className="inline-block bg-brand-100 text-brand-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
+                <span className="inline-block bg-primary-100 text-primary-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide mb-4">
                   {s.badge}
                 </span>
               )}
 
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-dark-900 mb-3"
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-3"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 {s.name}
               </h2>
 
-              <p className="text-brand-600 font-semibold text-sm mb-4">{s.summary}</p>
+              <p className="text-primary-600 font-semibold text-sm mb-4">{s.summary}</p>
 
-              <p className="text-dark-600 leading-relaxed mb-8">{s.desc}</p>
+              <p className="text-slate-600 leading-relaxed mb-8">{s.desc}</p>
 
               {/* Includes */}
               <div className="mb-8">
-                <h3 className="text-xs font-semibold text-dark-400 uppercase tracking-widest mb-4">
+                <h3 className="text-xs font-semibold text-slate-400 uppercase tracking-widest mb-4">
                   What's Included
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {s.includes.map(item => (
                     <div key={item} className="flex items-center gap-3">
-                      <div className="w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-3 h-3 text-brand-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <div className="w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0">
+                        <svg className="w-3 h-3 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span className="text-sm text-dark-700">{item}</span>
+                      <span className="text-sm text-slate-700">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Ideal for */}
-              <div className="flex items-center gap-3 bg-dark-50 rounded-xl px-4 py-3 mb-8">
+              <div className="flex items-center gap-3 bg-slate-50 rounded-xl px-4 py-3 mb-8">
                 <svg className="w-4 h-4 text-brand-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
-                <p className="text-sm text-dark-600">
-                  <span className="font-semibold text-dark-900">Ideal for: </span>
+                <p className="text-sm text-slate-600">
+                  <span className="font-semibold text-slate-900">Ideal for: </span>
                   {s.ideal}
                 </p>
               </div>
 
               {/* Price (mobile) */}
               <div className="flex items-baseline gap-2 mb-6 md:hidden">
-                <span className="text-4xl font-extrabold text-dark-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>${s.price}</span>
-                <span className="text-dark-400 text-sm">per visit · {s.duration}</span>
+                <span className="text-4xl font-extrabold text-slate-900" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>${s.price}</span>
+                <span className="text-slate-400 text-sm">per visit Â· {s.duration}</span>
               </div>
 
               {/* CTAs */}
@@ -269,33 +269,33 @@ export default function Services() {
                   href={`https://wa.me/15550001234?text=Hi%2C%20I%20want%20to%20book%20${encodeURIComponent(s.name)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-lg border border-dark-200 justify-center flex items-center gap-2 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-colors"
+                  className="btn btn-lg border border-slate-200 justify-center flex items-center gap-2 hover:bg-[#25D366] hover:text-white hover:border-[#25D366] transition-colors"
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                   WhatsApp
                 </a>
               </div>
 
-              <p className="text-xs text-dark-400 mt-3 text-center sm:text-left">
-                Free cancellation 24h before · No hidden fees · Satisfaction guaranteed
+              <p className="text-xs text-slate-400 mt-3 text-center sm:text-left">
+                Free cancellation 24h before Â· No hidden fees Â· Satisfaction guaranteed
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Trust strip ── */}
-      <section className="bg-dark-50 border-t border-dark-100 py-10">
+      {/* â”€â”€ Trust strip â”€â”€ */}
+      <section className="bg-slate-50 border-t border-slate-100 py-10">
         <div className="container-xl">
           <div className="flex flex-wrap items-center justify-center gap-10">
             {[
-              { icon: '🛡️', text: 'Fully insured & bonded' },
-              { icon: '✅', text: 'Background-checked staff' },
-              { icon: '♻️', text: 'Eco-friendly products' },
-              { icon: '⭐', text: '4.9★ average rating' },
-              { icon: '🔄', text: '100% satisfaction guarantee' },
+              { icon: 'ðŸ›¡ï¸', text: 'Fully insured & bonded' },
+              { icon: 'âœ…', text: 'Background-checked staff' },
+              { icon: 'â™»ï¸', text: 'Eco-friendly products' },
+              { icon: 'â­', text: '4.9â˜… average rating' },
+              { icon: 'ðŸ”„', text: '100% satisfaction guarantee' },
             ].map(item => (
-              <div key={item.text} className="flex items-center gap-2.5 text-sm text-dark-600">
+              <div key={item.text} className="flex items-center gap-2.5 text-sm text-slate-600">
                 <span className="text-lg">{item.icon}</span>
                 <span className="font-medium">{item.text}</span>
               </div>
@@ -304,16 +304,16 @@ export default function Services() {
         </div>
       </section>
 
-      {/* ── Bottom CTA ── */}
+      {/* â”€â”€ Bottom CTA â”€â”€ */}
       <section className="bg-white py-16">
         <div className="container-xl">
-          <div className="bg-dark-900 rounded-3xl px-8 py-12 sm:px-14 flex flex-col sm:flex-row items-center justify-between gap-8">
+          <div className="bg-slate-900 rounded-3xl px-8 py-12 sm:px-14 flex flex-col sm:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white mb-2"
                 style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
                 Not sure which service fits?
               </h2>
-              <p className="text-dark-400 text-base">
+              <p className="text-slate-400 text-base">
                 Our team will help you choose the right option for your home.
               </p>
             </div>
@@ -330,3 +330,4 @@ export default function Services() {
     </MainLayout>
   )
 }
+

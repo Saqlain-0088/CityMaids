@@ -1,4 +1,4 @@
-import MainLayout from '../components/layout/MainLayout'
+﻿import MainLayout from '../components/layout/MainLayout'
 import { useInView } from '../hooks/useInView'
 import { Link } from 'react-router-dom'
 
@@ -24,7 +24,7 @@ export default function Testimonials() {
     <MainLayout>
       <div className='bg-gradient-to-br from-slate-900 to-slate-800 py-20'>
         <div className='container-xl text-center'>
-          <span className='inline-block text-brand-400 font-semibold text-sm uppercase tracking-widest mb-3'>Customer Reviews</span>
+          <span className='inline-block text-primary-400 font-semibold text-sm uppercase tracking-widest mb-3'>Customer Reviews</span>
           <h1 className='text-4xl sm:text-5xl font-extrabold text-white mb-4' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>What Our Customers Say</h1>
           <div className='flex items-center justify-center gap-3 mt-4'>
             <Stars n={5} />
@@ -47,7 +47,7 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
-          <div className='mt-14 bg-brand-50 border border-brand-100 rounded-3xl p-8 sm:p-12 text-center'>
+          <div className='mt-14 bg-primary-50 border border-brand-100 rounded-3xl p-8 sm:p-12 text-center'>
             <p className='text-2xl font-extrabold text-slate-900 mb-2' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Ready to experience the difference?</p>
             <p className='text-slate-500 mb-6'>Join 5,000+ happy customers across New York City.</p>
             <div className='flex flex-col sm:flex-row gap-3 justify-center'>

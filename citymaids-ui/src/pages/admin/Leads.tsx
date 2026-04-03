@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import AdminLayout from '../../components/layout/AdminLayout'
 import Button from '../../components/ui/Button'
 import Modal from '../../components/ui/Modal'
@@ -44,7 +44,7 @@ export default function AdminLeads() {
         <div className="flex flex-wrap gap-2">
           {([['', 'All Leads'], ['new', 'New'], ['contacted', 'Contacted'], ['converted', 'Converted'], ['lost', 'Lost']] as const).map(([v, l]) => (
             <button key={v} onClick={() => setFilter(v)}
-              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${filter === v ? 'bg-brand-600 text-white shadow-brand' : 'bg-white border border-slate-200 text-slate-600 hover:border-brand-300 hover:text-brand-700'}`}>
+              className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all ${filter === v ? 'bg-primary-600 text-white shadow-brand' : 'bg-white border border-slate-200 text-slate-600 hover:border-brand-300 hover:text-primary-700'}`}>
               {l}
             </button>
           ))}
@@ -146,3 +146,4 @@ export default function AdminLeads() {
     </AdminLayout>
   )
 }
+

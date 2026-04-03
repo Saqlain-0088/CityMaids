@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
 import { Input, Textarea, Select } from '../components/ui/Input'
 
@@ -12,7 +12,7 @@ export default function Contact() {
     <MainLayout>
       <div className='bg-gradient-to-br from-slate-900 to-slate-800 py-20'>
         <div className='container-xl text-center'>
-          <span className='inline-block text-brand-400 font-semibold text-sm uppercase tracking-widest mb-3'>Get In Touch</span>
+          <span className='inline-block text-primary-400 font-semibold text-sm uppercase tracking-widest mb-3'>Get In Touch</span>
           <h1 className='text-4xl sm:text-5xl font-extrabold text-white mb-4' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Contact Us</h1>
           <p className='text-slate-300 text-lg max-w-xl mx-auto'>Have a question or need a custom quote? We would love to hear from you.</p>
         </div>
@@ -25,9 +25,9 @@ export default function Contact() {
                 <h2 className='text-2xl font-extrabold text-slate-900 mb-3' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>We are Here to Help</h2>
                 <p className='text-slate-500 leading-relaxed'>Our team is available 7 days a week to answer your questions and help you book the perfect cleaning service.</p>
               </div>
-              {[{ icon: '📍', title: 'Our Office', value: '123 Clean Street, New York, NY 10001', sub: 'Mon–Fri: 8AM–8PM' }, { icon: '📞', title: 'Phone', value: '+1 (555) 000-1234', sub: 'Available 7 days a week' }, { icon: '✉️', title: 'Email', value: 'hello@citymaids.com', sub: 'We reply within 2 hours' }, { icon: '💬', title: 'WhatsApp', value: '+1 (555) 000-1234', sub: 'Instant response' }].map(item => (
-                <div key={item.title} className='flex items-start gap-4 p-4 bg-slate-50 rounded-2xl hover:bg-brand-50 transition-colors group'>
-                  <div className='w-12 h-12 rounded-xl bg-brand-100 group-hover:bg-brand-500 flex items-center justify-center text-xl flex-shrink-0 transition-colors'>{item.icon}</div>
+              {[{ icon: 'ðŸ“', title: 'Our Office', value: '123 Clean Street, New York, NY 10001', sub: 'Monâ€“Fri: 8AMâ€“8PM' }, { icon: 'ðŸ“ž', title: 'Phone', value: '+1 (555) 000-1234', sub: 'Available 7 days a week' }, { icon: 'âœ‰ï¸', title: 'Email', value: 'hello@citymaids.com', sub: 'We reply within 2 hours' }, { icon: 'ðŸ’¬', title: 'WhatsApp', value: '+1 (555) 000-1234', sub: 'Instant response' }].map(item => (
+                <div key={item.title} className='flex items-start gap-4 p-4 bg-slate-50 rounded-2xl hover:bg-primary-50 transition-colors group'>
+                  <div className='w-12 h-12 rounded-xl bg-primary-100 group-hover:bg-primary-500 flex items-center justify-center text-xl flex-shrink-0 transition-colors'>{item.icon}</div>
                   <div><p className='font-bold text-slate-900 text-sm'>{item.title}</p><p className='text-slate-700 text-sm font-medium'>{item.value}</p><p className='text-slate-400 text-xs mt-0.5'>{item.sub}</p></div>
                 </div>
               ))}
@@ -38,7 +38,7 @@ export default function Contact() {
               </a>
               <div className='bg-slate-100 rounded-2xl overflow-hidden h-48'>
                 <div className='w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-200 to-slate-300'>
-                  <div className='text-center'><p className='text-4xl mb-2'>📍</p><p className='text-slate-600 font-semibold text-sm'>123 Clean Street, New York</p><p className='text-slate-400 text-xs'>Google Maps</p></div>
+                  <div className='text-center'><p className='text-4xl mb-2'>ðŸ“</p><p className='text-slate-600 font-semibold text-sm'>123 Clean Street, New York</p><p className='text-slate-400 text-xs'>Google Maps</p></div>
                 </div>
               </div>
             </div>
@@ -46,8 +46,8 @@ export default function Contact() {
               <div className='bg-white rounded-3xl border border-slate-100 shadow-soft p-7 sm:p-8'>
                 {sent ? (
                   <div className='text-center py-12'>
-                    <div className='w-20 h-20 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-5'>
-                      <svg className='w-10 h-10 text-brand-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 13l4 4L19 7' /></svg>
+                    <div className='w-20 h-20 rounded-full bg-primary-100 flex items-center justify-center mx-auto mb-5'>
+                      <svg className='w-10 h-10 text-primary-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 13l4 4L19 7' /></svg>
                     </div>
                     <h3 className='text-2xl font-extrabold text-slate-900 mb-2' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Message Sent!</h3>
                     <p className='text-slate-500 mb-6'>We will get back to you within 2 hours.</p>

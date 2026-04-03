@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+﻿import { Link } from 'react-router-dom'
 import AdminLayout from '../../components/layout/AdminLayout'
 import { StatusBadge } from '../../components/ui/Badge'
 import Button from '../../components/ui/Button'
@@ -135,7 +135,7 @@ export default function AdminDashboard() {
                   { href: '/admin/leads', icon: <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>, label: 'View Leads', sub: `${leads.filter(l => l.status === 'new').length} new` },
                 ].map(item => (
                   <Link key={item.href} to={item.href} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors border border-slate-100 hover:border-brand-200 group">
-                    <div className="text-slate-400 group-hover:text-brand-600 transition-colors">{item.icon}</div>
+                    <div className="text-slate-400 group-hover:text-primary-600 transition-colors">{item.icon}</div>
                     <div className="flex-1">
                       <p className="font-medium text-slate-900 text-sm">{item.label}</p>
                       <p className="text-xs text-slate-400">{item.sub}</p>
@@ -150,10 +150,10 @@ export default function AdminDashboard() {
               <h2 className="font-bold text-slate-900 mb-4">Overview</h2>
               <div className="space-y-3">
                 {[
-                  { label: 'Total Customers', value: customers.length, icon: '👥', color: 'text-blue-600' },
-                  { label: 'Active Staff', value: staffMembers.filter(s => s.status === 'active').length, icon: '✅', color: 'text-brand-600' },
-                  { label: 'Pending Reviews', value: reviews.filter(r => r.status === 'pending').length, icon: '⭐', color: 'text-yellow-600' },
-                  { label: 'New Leads', value: leads.filter(l => l.status === 'new').length, icon: '📧', color: 'text-purple-600' },
+                  { label: 'Total Customers', value: customers.length, icon: 'ðŸ‘¥', color: 'text-blue-600' },
+                  { label: 'Active Staff', value: staffMembers.filter(s => s.status === 'active').length, icon: 'âœ…', color: 'text-primary-600' },
+                  { label: 'Pending Reviews', value: reviews.filter(r => r.status === 'pending').length, icon: 'â­', color: 'text-yellow-600' },
+                  { label: 'New Leads', value: leads.filter(l => l.status === 'new').length, icon: 'ðŸ“§', color: 'text-purple-600' },
                 ].map(item => (
                   <div key={item.label} className="flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
@@ -172,7 +172,7 @@ export default function AdminDashboard() {
           <div className="bg-white rounded-2xl border border-slate-100 shadow-soft">
             <div className="flex items-center justify-between p-5 border-b border-slate-50">
               <h2 className="font-bold text-slate-900">Top Customers</h2>
-              <Link to="/admin/customers" className="text-sm text-brand-600 hover:text-brand-700 font-medium">View all</Link>
+              <Link to="/admin/customers" className="text-sm text-primary-600 hover:text-primary-700 font-medium">View all</Link>
             </div>
             <div className="divide-y divide-slate-50">
               {customers.sort((a, b) => b.totalSpent - a.totalSpent).slice(0, 5).map(c => (
@@ -186,7 +186,7 @@ export default function AdminDashboard() {
                       <p className="text-xs text-slate-400">{c.totalBookings} bookings</p>
                     </div>
                   </div>
-                  <p className="font-bold text-brand-600">${c.totalSpent}</p>
+                  <p className="font-bold text-primary-600">${c.totalSpent}</p>
                 </div>
               ))}
             </div>
@@ -198,11 +198,11 @@ export default function AdminDashboard() {
             </div>
             <div className="p-5 space-y-4">
               {[
-                { text: 'New booking from Sarah Johnson', time: '5 min ago', icon: '📋', color: 'bg-blue-100 text-blue-600' },
-                { text: 'Carlos Rivera completed a job', time: '23 min ago', icon: '✅', color: 'bg-brand-100 text-brand-600' },
-                { text: 'New lead: Patricia Moore', time: '1 hour ago', icon: '📧', color: 'bg-purple-100 text-purple-600' },
-                { text: 'Review submitted by Emily Chen', time: '2 hours ago', icon: '⭐', color: 'bg-yellow-100 text-yellow-600' },
-                { text: 'Service updated: Deep Cleaning', time: '3 hours ago', icon: '🧹', color: 'bg-slate-100 text-slate-600' },
+                { text: 'New booking from Sarah Johnson', time: '5 min ago', icon: 'ðŸ“‹', color: 'bg-blue-100 text-blue-600' },
+                { text: 'Carlos Rivera completed a job', time: '23 min ago', icon: 'âœ…', color: 'bg-primary-100 text-primary-600' },
+                { text: 'New lead: Patricia Moore', time: '1 hour ago', icon: 'ðŸ“§', color: 'bg-purple-100 text-purple-600' },
+                { text: 'Review submitted by Emily Chen', time: '2 hours ago', icon: 'â­', color: 'bg-yellow-100 text-yellow-600' },
+                { text: 'Service updated: Deep Cleaning', time: '3 hours ago', icon: 'ðŸ§¹', color: 'bg-slate-100 text-slate-600' },
               ].map((a, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className={`w-8 h-8 rounded-lg ${a.color} flex items-center justify-center flex-shrink-0`}>
@@ -221,3 +221,4 @@ export default function AdminDashboard() {
     </AdminLayout>
   )
 }
+

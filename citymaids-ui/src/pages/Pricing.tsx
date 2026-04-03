@@ -1,17 +1,17 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 
 const plans = [
   { name: 'Basic', price: { m: 79, y: 67 }, desc: 'Perfect for regular home maintenance.', color: 'border-slate-200', features: ['Standard cleaning', 'Up to 2 hours', 'Vacuuming & mopping', 'Bathroom cleaning', 'Kitchen wipe-down', 'Trash removal'], missing: ['Inside appliances', 'Deep scrub', 'Priority scheduling'] },
-  { name: 'Standard', price: { m: 149, y: 127 }, desc: 'Our most popular deep cleaning package.', popular: true, color: 'border-brand-500', features: ['Everything in Basic', 'Up to 4 hours', 'Inside oven & fridge', 'Baseboards & sills', 'Cabinet interiors', 'Deep scrub bathrooms', 'Window cleaning'], missing: ['Priority scheduling'] },
+  { name: 'Standard', price: { m: 149, y: 127 }, desc: 'Our most popular deep cleaning package.', popular: true, color: 'border-primary-500', features: ['Everything in Basic', 'Up to 4 hours', 'Inside oven & fridge', 'Baseboards & sills', 'Cabinet interiors', 'Deep scrub bathrooms', 'Window cleaning'], missing: ['Priority scheduling'] },
   { name: 'Premium', price: { m: 249, y: 212 }, desc: 'Complete top-to-bottom transformation.', color: 'border-slate-200', features: ['Everything in Standard', 'Up to 6 hours', 'Post-construction clean', 'Wall spot cleaning', 'Garage sweep', 'Full property clean', 'Priority scheduling'], missing: [] },
 ]
 
 const faqs = [
   { q: 'Can I cancel or reschedule?', a: 'Yes, free cancellation up to 24 hours before your appointment. Reschedule anytime through your account.' },
   { q: 'Are supplies included?', a: 'Yes, our cleaners bring all necessary supplies and equipment.' },
-  { q: 'Is there a contract?', a: 'No contracts. Book as needed or set up recurring cleanings — cancel anytime.' },
+  { q: 'Is there a contract?', a: 'No contracts. Book as needed or set up recurring cleanings â€” cancel anytime.' },
   { q: 'What if I am not satisfied?', a: 'We offer a 100% satisfaction guarantee. Contact us within 24 hours and we will re-clean for free.' },
 ]
 
@@ -22,15 +22,15 @@ export default function Pricing() {
     <MainLayout>
       <div className='bg-gradient-to-br from-slate-900 to-slate-800 py-20'>
         <div className='container-xl text-center'>
-          <span className='inline-block text-brand-400 font-semibold text-sm uppercase tracking-widest mb-3'>Transparent Pricing</span>
+          <span className='inline-block text-primary-400 font-semibold text-sm uppercase tracking-widest mb-3'>Transparent Pricing</span>
           <h1 className='text-4xl sm:text-5xl font-extrabold text-white mb-4' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>Simple, Honest Pricing</h1>
           <p className='text-slate-300 text-lg max-w-xl mx-auto mb-8'>No hidden fees. No surprises. Choose the plan that works for your home.</p>
           <div className='flex items-center justify-center gap-4'>
             <span className={`text-sm font-semibold ${!yearly ? 'text-white' : 'text-slate-400'}`}>Monthly</span>
-            <button onClick={() => setYearly(y => !y)} className={`relative w-14 h-7 rounded-full transition-colors duration-300 ${yearly ? 'bg-brand-500' : 'bg-slate-600'}`}>
+            <button onClick={() => setYearly(y => !y)} className={`relative w-14 h-7 rounded-full transition-colors duration-300 ${yearly ? 'bg-primary-500' : 'bg-slate-600'}`}>
               <div className={`absolute top-1 w-5 h-5 bg-white rounded-full shadow transition-transform duration-300 ${yearly ? 'translate-x-8' : 'translate-x-1'}`} />
             </button>
-            <span className={`text-sm font-semibold ${yearly ? 'text-white' : 'text-slate-400'}`}>Yearly <span className='text-brand-400 text-xs'>(Save 15%)</span></span>
+            <span className={`text-sm font-semibold ${yearly ? 'text-white' : 'text-slate-400'}`}>Yearly <span className='text-primary-400 text-xs'>(Save 15%)</span></span>
           </div>
         </div>
       </div>
@@ -38,20 +38,20 @@ export default function Pricing() {
         <div className='container-xl max-w-5xl'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {plans.map((plan) => (
-              <div key={plan.name} className={`relative rounded-3xl p-8 border-2 ${plan.popular ? 'border-brand-500 shadow-brand' : 'border-slate-200 shadow-soft'} hover:-translate-y-2 transition-all duration-300`}>
-                {plan.popular && <div className='absolute -top-4 left-1/2 -translate-x-1/2'><span className='bg-brand-600 text-white text-xs font-bold px-5 py-1.5 rounded-full shadow-lg'>Most Popular</span></div>}
+              <div key={plan.name} className={`relative rounded-3xl p-8 border-2 ${plan.popular ? 'border-primary-500 shadow-brand' : 'border-slate-200 shadow-soft'} hover:-translate-y-2 transition-all duration-300`}>
+                {plan.popular && <div className='absolute -top-4 left-1/2 -translate-x-1/2'><span className='bg-primary-600 text-white text-xs font-bold px-5 py-1.5 rounded-full shadow-lg'>Most Popular</span></div>}
                 <h3 className='text-xl font-bold text-slate-900 mb-1'>{plan.name}</h3>
                 <p className='text-sm text-slate-400 mb-6'>{plan.desc}</p>
                 <div className='mb-8'>
                   <span className='text-5xl font-extrabold text-slate-900' style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>${yearly ? plan.price.y : plan.price.m}</span>
                   <span className='text-sm text-slate-400 ml-2'>/ visit</span>
-                  {yearly && <p className='text-brand-600 text-xs font-semibold mt-1'>Save ${plan.price.m - plan.price.y}/visit</p>}
+                  {yearly && <p className='text-primary-600 text-xs font-semibold mt-1'>Save ${plan.price.m - plan.price.y}/visit</p>}
                 </div>
                 <ul className='space-y-3 mb-8'>
                   {plan.features.map(f => (
                     <li key={f} className='flex items-center gap-2.5 text-sm'>
-                      <div className='w-5 h-5 rounded-full bg-brand-100 flex items-center justify-center flex-shrink-0'>
-                        <svg className='w-3 h-3 text-brand-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={3} d='M5 13l4 4L19 7' /></svg>
+                      <div className='w-5 h-5 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0'>
+                        <svg className='w-3 h-3 text-primary-600' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth={3} d='M5 13l4 4L19 7' /></svg>
                       </div>
                       <span className='text-slate-700'>{f}</span>
                     </li>
@@ -65,7 +65,7 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <Link to='/booking' className={`block text-center font-bold py-3 rounded-xl transition-colors ${plan.popular ? 'bg-brand-600 text-white hover:bg-brand-700' : 'bg-slate-100 text-slate-900 hover:bg-slate-200'}`}>Book This Plan</Link>
+                <Link to='/booking' className={`block text-center font-bold py-3 rounded-xl transition-colors ${plan.popular ? 'bg-primary-600 text-white hover:bg-brand-700' : 'bg-slate-100 text-slate-900 hover:bg-slate-200'}`}>Book This Plan</Link>
               </div>
             ))}
           </div>
