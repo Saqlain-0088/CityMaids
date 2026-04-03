@@ -1,4 +1,4 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import MainLayout from '../components/layout/MainLayout'
 
@@ -137,10 +137,8 @@ export default function Services() {
 
       {/* â”€â”€ Page Header â”€â”€ */}
       <div className="bg-gradient-to-br from-slate-900 to-primary-950 py-16"><div className="container-xl">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-px bg-primary-500" />
-              <span className="text-primary-400 font-semibold text-xs uppercase tracking-widest">What We Offer</span>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="flex items-center justify-center gap-3 mb-4"><span className="text-primary-400 font-semibold text-xs uppercase tracking-widest">What We Offer</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight mb-4"
               style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
@@ -328,6 +326,8 @@ export default function Services() {
     </MainLayout>
   )
 }
+
+
 
 
 
