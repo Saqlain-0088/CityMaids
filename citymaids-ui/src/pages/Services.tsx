@@ -280,25 +280,6 @@ export default function Services() {
         </div>
       </section>
 
-      {/* \u2500\u2500 Trust strip \u2500\u2500 */}
-      <section className="bg-slate-50 border-t border-slate-100 py-10">
-        <div className="container-xl">
-          <div className="flex flex-wrap items-center justify-center gap-10">
-            {[
-              { icon: '\uD83D\uDEE1\uFE0F', text: 'Fully insured & bonded' },
-              { icon: '\u2705', text: 'Background-checked staff' },
-              { icon: '\u267B\uFE0F', text: 'Eco-friendly products' },
-              { icon: '\u2B50', text: '4.9\u2605 average rating' },
-              { icon: '\uD83D\uDD04', text: '100% satisfaction guarantee' },
-            ].map(item => (
-              <div key={item.text} className="flex items-center gap-2.5 text-sm text-slate-600">
-                <span className="text-lg">{item.icon}</span>
-                <span className="font-medium">{item.text}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* \u2500\u2500 Bottom CTA \u2500\u2500 */}
       <section className="bg-white py-16">
