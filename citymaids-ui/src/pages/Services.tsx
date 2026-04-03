@@ -287,7 +287,7 @@ export default function Services() {
             {[
               { icon: '\uD83D\uDEE1\uFE0F', text: 'Fully insured & bonded' },
               { icon: '\u2705', text: 'Background-checked staff' },
-              { icon: '\u00E2\u2122\u00BB\u00EF\u00B8\u008F', text: 'Eco-friendly products' },
+              { icon: '\u267B\uFE0F', text: 'Eco-friendly products' },
               { icon: '\u2B50', text: '4.9\u2605 average rating' },
               { icon: '\uD83D\uDD04', text: '100% satisfaction guarantee' },
             ].map(item => (

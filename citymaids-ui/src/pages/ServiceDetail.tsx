@@ -83,7 +83,7 @@ export default function ServiceDetail() {
             <div className='bg-primary-50 border border-brand-100 rounded-2xl p-7'>
               <h3 className='font-bold text-slate-900 mb-5 text-lg'>Why Choose CityMaids</h3>
               <div className='space-y-3'>
-                {[['\u2705', 'Verified & insured professionals'], ['\u2B50', '4.9\u2605 average customer rating'], ['\uD83D\uDD04', '100% satisfaction guarantee'], ['\u00E2\u2122\u00BB\u00EF\u00B8\u008F', 'Eco-friendly products only'], ['\uD83D\uDCF1', 'Easy online booking & management']].map(([icon, text]) => (
+                {[['\u2705', 'Verified & insured professionals'], ['\u2B50', '4.9\u2605 average customer rating'], ['\uD83D\uDD04', '100% satisfaction guarantee'], ['\u267B\uFE0F', 'Eco-friendly products only'], ['\uD83D\uDCF1', 'Easy online booking & management']].map(([icon, text]) => (
                   <div key={text} className='flex items-center gap-3'><span className='text-lg'>{icon}</span><span className='text-slate-700 text-sm font-medium'>{text}</span></div>
                 ))}
               </div>
