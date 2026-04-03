@@ -1,63 +1,78 @@
+import { useState } from 'react'
 import { useInView } from '../../hooks/useInView'
+import BeforeAfterSlider from '../ui/BeforeAfterSlider'
 
 const pairs = [
   {
-    label: 'Kitchen Deep Clean',
-    before: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80',
-    after: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80',
+    label: 'Kitchen Reset',
+    sub: 'Grease and grime completely eradicated',
+    before: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80',
+    after: 'https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1200&q=80',
   },
   {
-    label: 'Bathroom Restoration',
-    before: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80',
-    after: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=600&q=80',
+    label: 'Bathroom Polish',
+    sub: 'Stubborn grout and limescale gone',
+    before: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=1200&q=80',
+    after: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=1200&q=80',
   },
   {
-    label: 'Living Room Refresh',
-    before: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-    after: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80',
+    label: 'Home Maintenance',
+    sub: 'Dust and allergen-free living zones',
+    before: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80',
+    after: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1200&q=80',
   },
 ]
 
 export default function BeforeAfterSection() {
   const { ref, inView } = useInView()
+  const [active, setActive] = useState(0)
 
   return (
-    <section className="section bg-slate-900" ref={ref}>
+    <section className="section bg-slate-900 overflow-hidden" ref={ref}>
       <div className="container-xl">
-        <div className="text-center mb-14">
-          <p className="text-brand-400 font-semibold text-xs uppercase tracking-widest mb-3">Real Results</p>
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-primary-400 font-bold text-xs uppercase tracking-widest mb-4">
+            Real Transformations
+          </span>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white leading-tight" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-            See the Difference
+            See the <span className="bg-gradient-to-r from-primary-400 to-teal-400 bg-clip-text text-transparent">Difference</span>
           </h2>
-          <p className="text-slate-400 mt-4 max-w-xl mx-auto">Every job we do speaks for itself. Here's what our customers experience.</p>
+          <p className="text-slate-400 mt-5 max-w-xl mx-auto text-lg">
+            We don't just clean, we restore. Drag the handle to reveal the power of a professional deep clean.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {pairs.map((pair, i) => (
-            <div
-              key={pair.label}
-              className={`rounded-2xl overflow-hidden border border-white/10 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-              style={{ transitionDelay: `${i * 120}ms` }}
+        {/* Tab buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+          {pairs.map((p, i) => (
+            <button
+              key={p.label}
+              onClick={() => setActive(i)}
+              className={`px-6 py-3 rounded-2xl font-bold text-sm transition-all duration-300 border ${
+                active === i
+                  ? 'bg-primary-600 border-primary-500 text-white shadow-lg'
+                  : 'bg-white/5 border-white/10 text-slate-400 hover:bg-white/10'
+              }`}
             >
-              <div className="grid grid-cols-2">
-                <div className="relative">
-                  <img src={pair.before} alt="Before" className="w-full h-48 object-cover" />
-                  <span className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">Before</span>
-                </div>
-                <div className="relative">
-                  <img src={pair.after} alt="After" className="w-full h-48 object-cover" />
-                  <span className="absolute top-2 right-2 bg-brand-500 text-white text-xs font-bold px-2.5 py-1 rounded-full">After</span>
-                </div>
-              </div>
-              <div className="bg-white/5 px-4 py-3 text-center">
-                <p className="text-white font-semibold text-sm">{pair.label}</p>
-              </div>
-            </div>
+              {p.label}
+            </button>
           ))}
         </div>
 
-        <div className="text-center mt-10">
-          <a href="/booking" className="btn-primary btn-lg">Book Your Transformation</a>
+        {/* The Slider Container */}
+        <div className={`max-w-4xl mx-auto transition-all duration-700 ${inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <BeforeAfterSlider 
+            key={active}
+            before={pairs[active].before} 
+            after={pairs[active].after} 
+            label={pairs[active].sub} 
+          />
+        </div>
+
+        <div className="text-center mt-12">
+          <a href="/booking" className="btn btn-brand btn-lg px-10 rounded-2xl shadow-xl">
+            Book Your Transformation
+          </a>
         </div>
       </div>
     </section>
